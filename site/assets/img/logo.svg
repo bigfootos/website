@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" fill="none">
+  <defs>
+    <linearGradient id="canvasBg" x1="256" y1="0" x2="256" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#11141d"/>
+      <stop offset="55%" stop-color="#080a0f"/>
+      <stop offset="100%" stop-color="#06070a"/>
+    </linearGradient>
+    <radialGradient id="stageBloom" cx="256" cy="248" r="256" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.062"/>
+      <stop offset="52%" stop-color="#7dd3fc" stop-opacity="0.016"/>
+      <stop offset="100%" stop-color="#06070a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="zenithGlow" cx="256" cy="36" r="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#93c5fd" stop-opacity="0.032"/>
+      <stop offset="100%" stop-color="#06070a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="rimStroke" x1="256" y1="92" x2="256" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f5f5f7" stop-opacity="0.96"/>
+      <stop offset="100%" stop-color="#d8dce3" stop-opacity="0.54"/>
+    </linearGradient>
+    <linearGradient id="glassFill" x1="256" y1="96" x2="256" y2="416" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.078"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.026"/>
+    </linearGradient>
+    <linearGradient id="glassFillStrong" x1="256" y1="96" x2="256" y2="416" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.125"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.042"/>
+    </linearGradient>
+    <linearGradient id="glassBorder" x1="256" y1="96" x2="256" y2="416" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f4f4f6" stop-opacity="0.58"/>
+      <stop offset="100%" stop-color="#f4f4f6" stop-opacity="0.24"/>
+    </linearGradient>
+    <linearGradient id="ctaFill" x1="256" y1="92" x2="256" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e8eaef"/>
+    </linearGradient>
+    <filter id="ctaGlow" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+    </filter>
+
+  </defs>
+  <!-- OLED Obsidian Stage -->
+  <rect width="512" height="512" fill="url(#canvasBg)"/>
+  <circle cx="256" cy="248" r="256" fill="url(#stageBloom)"/>
+  <circle cx="256" cy="36" r="320" fill="url(#zenithGlow)"/>
+
+  <!-- Signature 16:9 Floating Television Bezel -->
+  <rect x="64" y="118" width="384" height="228" rx="42" fill="#0b0d13" fill-opacity="0.72"/>
+  <rect x="64" y="118" width="384" height="228" rx="42" fill="url(#glassFill)" stroke="url(#rimStroke)" stroke-width="12.5"/>
+  <rect x="78" y="132" width="356" height="200" rx="30" stroke="#ffffff" stroke-opacity="0.06" stroke-width="2"/>
+  <!-- Detached Floating Pedestal -->
+  <line x1="186" y1="386" x2="326" y2="386" stroke="#f4f4f6" stroke-opacity="0.54" stroke-width="11.5" stroke-linecap="round"/>
+  <!-- 5-Way D-Pad Focus Core inside Screen (center 256, 232) -->
+  <circle cx="256" cy="232" r="76" fill="url(#glassFillStrong)" stroke="#f4f4f6" stroke-opacity="0.22" stroke-width="3.5"/>
+  <!-- Directional Chevrons -->
+  <path d="M 241 178 L 256 164 L 271 178" stroke="#f4f4f6" stroke-opacity="0.92" stroke-width="9.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 241 286 L 256 300 L 271 286" stroke="#f4f4f6" stroke-opacity="0.92" stroke-width="9.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 202 217 L 188 232 L 202 247" stroke="#f4f4f6" stroke-opacity="0.92" stroke-width="9.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 310 217 L 324 232 L 310 247" stroke="#f4f4f6" stroke-opacity="0.92" stroke-width="9.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Focused Center OK Disc -->
+  <circle cx="256" cy="232" r="36" fill="#ffffff" fill-opacity="0.16"/>
+  <circle cx="256" cy="232" r="25.5" fill="url(#ctaFill)"/>
+
+</svg>

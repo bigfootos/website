@@ -1,0 +1,48 @@
+# =============================================================================
+# 10ft Website — GitLab CI/CD Pipeline
+# =============================================================================
+# Static site (no build step) published to GitLab Pages from `site/`.
+#
+# The Pages site must use a NON-unique domain so it is served from the group
+# Pages domain (https://10ft.pages.sector64.net/website/), like `10ft/flatpaks`.
+# That is a project setting (Deploy > Pages > "Use unique domain": off), not a
+# CI keyword. All URLs in `site/` are relative so the path prefix works.
+# =============================================================================
+
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: $CI_PIPELINE_SOURCE == "web"
+
+default:
+  interruptible: true
+  tags:
+    - docker
+
+stages:
+  - test
+  - deploy
+
+check:site:
+  stage: test
+  image: docker.io/library/python:3-alpine
+  script:
+    - python3 scripts/check-site.py
+
+pages:
+  stage: deploy
+  image: docker.io/library/alpine:latest
+  resource_group: website-pages
+  needs:
+    - job: check:site
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: $CI_PIPELINE_SOURCE == "web"
+  script:
+    - mkdir -p public
+    - cp -r site/. public/
+    - echo "GitLab Pages URL ${CI_PAGES_URL:-https://10ft.pages.sector64.net/website}"
+  artifacts:
+    paths:
+      - public

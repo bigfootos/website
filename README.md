@@ -31,7 +31,7 @@ Pushing to `main` runs the `pages` job, which publishes `site/` to:
 The project uses a **non-unique** Pages domain (like [`10ft/flatpaks`](https://git.sektor64.net/10ft/flatpaks)), so the URL is stable and human-readable instead of a generated `*-<hash>.pages…` hostname. This is configured per project under **Deploy → Pages → Use unique domain** (off), or via the API:
 
 ```bash
-curl -X PUT -H "PRIVATE-TOKEN: $GITLAB_TOKEN" \
+curl -X PATCH -H "PRIVATE-TOKEN: $GITLAB_TOKEN" \
   --data "pages_unique_domain_enabled=false" \
   "$GITLAB_HOST/api/v4/projects/10ft%2Fwebsite/pages"
 ```

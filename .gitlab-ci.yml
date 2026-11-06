@@ -49,8 +49,8 @@ pages:
 
 docker:
   stage: deploy
-  image: docker.io/library/docker:latest
+  image: quay.io/buildah/stable
   script:
-    - docker build -t git.sektor64.net/10ft/website .
-    - echo $CI_REGISTRY_PASSWORD | docker login -u $CI_REGISTRY_USER --password-stdin $CI_REGISTRY
-    - docker push git.sektor64.net/10ft/website:latest
+    - buildah build -t git.sektor64.net/10ft/website:latest .
+    - echo $CI_REGISTRY_PASSWORD | buildah login -u $CI_REGISTRY_USER --password-stdin $CI_REGISTRY
+    - buildah push git.sektor64.net/10ft/website:latest

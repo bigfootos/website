@@ -1,19 +1,23 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>10ft OS — A free, private operating system for your TV</title>
-  <meta name="description" content="10ft OS turns a mini-PC into a smart TV you control with your normal TV remote. No ads, no telemetry, no account required. Open source.">
+  <meta name="description"
+    content="10ft OS turns a mini-PC into a smart TV you control with your normal TV remote. No ads, no telemetry, no account required. Open source.">
   <meta name="color-scheme" content="dark">
   <meta name="theme-color" content="#06070a">
   <meta property="og:title" content="10ft OS — A free, private operating system for your TV">
-  <meta property="og:description" content="No ads. No telemetry. No account. An open-source TV operating system built for the couch.">
+  <meta property="og:description"
+    content="No ads. No telemetry. No account. An open-source TV operating system built for the couch.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/img/pairing.png">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
@@ -38,13 +42,14 @@
       <div class="wrap hero-inner">
         <p class="eyebrow">Open-source television OS</p>
         <h1>A smart TV that<br>works for you.</h1>
-        <p class="lede">10ft OS turns a mini-PC into a TV you control with your normal remote. No ads. No telemetry. No account. Apps stay separate from the system, so an update can’t break your picture or sound.</p>
+        <p class="lede">10ft OS turns a mini-PC into a TV you control with your normal remote. No ads. No telemetry. No
+          account. Apps stay separate from the system, so an update can’t break your picture or sound.</p>
         <div class="cta-row">
           <a class="btn primary" href="#install">Install 10ft OS</a>
           <a class="btn" href="https://git.sektor64.net/10ft" rel="noopener">View source</a>
         </div>
         <figure class="hero-shot">
-          <img src="assets/img/pairing.png" width="1920" height="1080" alt="10ft OS asking you to put your remote into pairing mode">
+          <img src="assets/img/home.png" width="1920" height="1080" alt="10ft OS home screen">
         </figure>
       </div>
     </section>
@@ -61,7 +66,8 @@
           </li>
           <li class="card">
             <h3>Your remote just works</h3>
-            <p>HDMI-CEC is on by default, so the remote that came with your TV navigates 10ft OS. Bluetooth remotes and Xbox controllers work too.</p>
+            <p>HDMI-CEC is on by default, so the remote that came with your TV navigates 10ft OS. Bluetooth remotes and
+              Xbox controllers work too.</p>
           </li>
           <li class="card">
             <h3>Guided first-run setup</h3>
@@ -73,7 +79,8 @@
           </li>
           <li class="card">
             <h3>Safe updates</h3>
-            <p>Updates download in the background and apply on reboot. If one misbehaves, roll back to the previous version.</p>
+            <p>Updates download in the background and apply on reboot. If one misbehaves, roll back to the previous
+              version.</p>
           </li>
           <li class="card">
             <h3>Phone as remote</h3>
@@ -81,7 +88,8 @@
           </li>
           <li class="card">
             <h3>Home Assistant</h3>
-            <p>Optional integration to control playback, volume and TV power from your smart home. Off until you turn it on.</p>
+            <p>Optional integration to control playback, volume and TV power from your smart home. Off until you turn it
+              on.</p>
           </li>
           <li class="card">
             <h3>Hardware video decoding</h3>
@@ -91,15 +99,18 @@
 
         <div class="shots">
           <figure>
-            <img src="assets/img/auto-pairing.png" width="1920" height="1080" loading="lazy" alt="10ft OS discovering and pairing a Bluetooth remote automatically">
+            <img src="assets/img/auto-pairing.png" width="1920" height="1080" loading="lazy"
+              alt="10ft OS discovering and pairing a Bluetooth remote automatically">
             <figcaption>Remotes pair themselves.</figcaption>
           </figure>
           <figure>
-            <img src="assets/img/language.png" width="1920" height="1080" loading="lazy" alt="Choosing a language during first-run setup">
+            <img src="assets/img/language.png" width="1920" height="1080" loading="lazy"
+              alt="Choosing a language during first-run setup">
             <figcaption>Pick your language.</figcaption>
           </figure>
           <figure>
-            <img src="assets/img/sound.png" width="1920" height="1080" loading="lazy" alt="Choosing a sound output during first-run setup">
+            <img src="assets/img/sound.png" width="1920" height="1080" loading="lazy"
+              alt="Choosing a sound output during first-run setup">
             <figcaption>Choose where sound plays.</figcaption>
           </figure>
         </div>
@@ -110,27 +121,31 @@
       <div class="wrap">
         <p class="eyebrow">How it works</p>
         <h2>A solid base. A TV shell. Apps on top.</h2>
-        <p class="sub">Three layers, each updated on its own, so a broken app can never take the screen down with it.</p>
+        <p class="sub">Three layers, each updated on its own, so a broken app can never take the screen down with it.
+        </p>
         <ol class="layers">
           <li>
             <span class="layer-n">1</span>
             <div>
               <h3>Immutable base</h3>
-              <p>Universal Blue / Fedora Atomic delivered as a bootable container with <code>bootc</code>. The system is read-only, updates are atomic and rollbacks are instant.</p>
+              <p>Universal Blue / Fedora Atomic delivered as a bootable container with <code>bootc</code>. The system is
+                read-only, updates are atomic and rollbacks are instant.</p>
             </div>
           </li>
           <li>
             <span class="layer-n">2</span>
             <div>
               <h3>10-foot shell</h3>
-              <p>KDE Plasma Bigscreen on Wayland with PipeWire audio. Tear-free 60 fps and lossless audio passthrough.</p>
+              <p>KDE Plasma Bigscreen on Wayland with PipeWire audio. Tear-free 60 fps and lossless audio passthrough.
+              </p>
             </div>
           </li>
           <li>
             <span class="layer-n">3</span>
             <div>
               <h3>Sandboxed apps</h3>
-              <p>Flatpaks from Flathub and the 10ft repository, isolated from the system. Update apps whenever you like.</p>
+              <p>Flatpaks from Flathub and the 10ft repository, isolated from the system. Update apps whenever you like.
+              </p>
             </div>
           </li>
         </ol>
@@ -146,14 +161,19 @@
         <ol class="steps">
           <li>
             <h3>Download the installer</h3>
-            <p>Get the installer for your computer from the package registry. It installs the stable channel by default.</p>
+            <p>Get the installer for your computer from the package registry. It installs the stable channel by default.
+            </p>
             <p>
-              <a class="btn primary" href="https://git.sektor64.net/groups/10ft/-/packages/12" rel="noopener">Download installer</a>
+              <a class="btn primary" href="https://git.sektor64.net/groups/10ft/-/packages/12" rel="noopener">Download
+                installer</a>
             </p>
           </li>
           <li>
             <h3>Write it to a USB stick</h3>
-            <p>Use <a href="https://fedoraproject.org/workstation/download" rel="noopener">Fedora Media Writer</a>, <a href="https://etcher.balena.io/" rel="noopener">balenaEtcher</a>, the <a href="https://www.raspberrypi.com/software/" rel="noopener">Raspberry Pi Imager</a> or the command line. Replace <code>/dev/sdX</code> with your USB device. This erases it.</p>
+            <p>Use <a href="https://fedoraproject.org/workstation/download" rel="noopener">Fedora Media Writer</a>, <a
+                href="https://etcher.balena.io/" rel="noopener">balenaEtcher</a>, the <a
+                href="https://www.raspberrypi.com/software/" rel="noopener">Raspberry Pi Imager</a> or the command line.
+              Replace <code>/dev/sdX</code> with your USB device. This erases it.</p>
             <div class="code">
               <pre><code id="dd-cmd">sudo dd if=10ft-os-amd64-netinstall.iso of=/dev/sdX bs=4M status=progress conv=fsync</code></pre>
               <button type="button" class="copy" data-copy="dd-cmd" hidden>Copy</button>
@@ -173,11 +193,25 @@
         <p class="sub">Choose a channel in <strong>Settings → System &amp; Updates</strong> at any time.</p>
         <div class="table-wrap">
           <table>
-            <thead><tr><th>Channel</th><th>Best for</th></tr></thead>
+            <thead>
+              <tr>
+                <th>Channel</th>
+                <th>Best for</th>
+              </tr>
+            </thead>
             <tbody>
-              <tr><td><strong>Stable</strong></td><td>Your living-room TV. Thoroughly tested.</td></tr>
-              <tr><td><strong>Beta</strong></td><td>Early access to upcoming changes.</td></tr>
-              <tr><td><strong>Main</strong></td><td>Latest development builds. May break.</td></tr>
+              <tr>
+                <td><strong>Stable</strong></td>
+                <td>Your living-room TV. Thoroughly tested.</td>
+              </tr>
+              <tr>
+                <td><strong>Beta</strong></td>
+                <td>Early access to upcoming changes.</td>
+              </tr>
+              <tr>
+                <td><strong>Main</strong></td>
+                <td>Latest development builds. May break.</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -185,22 +219,53 @@
         <h3 class="subhead">Supported hardware</h3>
         <div class="table-wrap">
           <table>
-            <thead><tr><th>Platform</th><th>Status</th></tr></thead>
+            <thead>
+              <tr>
+                <th>Platform</th>
+                <th>Status</th>
+              </tr>
+            </thead>
             <tbody>
-              <tr><td>AMD64 (<code>x86_64</code>)</td><td>Tested on bare metal and QEMU</td></tr>
-              <tr><td>ARM64 (<code>aarch64</code>)</td><td>Tested in UTM on macOS</td></tr>
+              <tr>
+                <td>AMD64 (<code>x86_64</code>)</td>
+                <td>Tested on bare metal and QEMU</td>
+              </tr>
+              <tr>
+                <td>ARM64 (<code>aarch64</code>)</td>
+                <td>Tested in UTM on macOS</td>
+              </tr>
             </tbody>
           </table>
         </div>
         <div class="table-wrap">
           <table>
-            <thead><tr><th>Remote or controller</th><th>Status</th></tr></thead>
+            <thead>
+              <tr>
+                <th>Remote or controller</th>
+                <th>Status</th>
+              </tr>
+            </thead>
             <tbody>
-              <tr><td>Amazon Fire TV Remote (Bluetooth)</td><td>Working</td></tr>
-              <tr><td>Xbox Elite Wireless Controller Series 2</td><td>Working</td></tr>
-              <tr><td>Other Xbox One S and Series X|S controllers</td><td>Untested, supported by <code>xpadneo</code></td></tr>
-              <tr><td>Chromecast with Google TV Remote (Bluetooth)</td><td>Untested</td></tr>
-              <tr><td>HDMI-CEC TV remotes, Pulse-Eight USB-CEC adapters, IR receivers</td><td>Supported</td></tr>
+              <tr>
+                <td>Amazon Fire TV Remote (Bluetooth)</td>
+                <td>Working</td>
+              </tr>
+              <tr>
+                <td>Xbox Elite Wireless Controller Series 2</td>
+                <td>Working</td>
+              </tr>
+              <tr>
+                <td>Other Xbox One S and Series X|S controllers</td>
+                <td>Untested, supported by <code>xpadneo</code></td>
+              </tr>
+              <tr>
+                <td>Chromecast with Google TV Remote (Bluetooth)</td>
+                <td>Untested</td>
+              </tr>
+              <tr>
+                <td>HDMI-CEC TV remotes, Pulse-Eight USB-CEC adapters, IR receivers</td>
+                <td>Supported</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -214,7 +279,8 @@
         <ul class="grid two">
           <li class="card">
             <h3>No telemetry</h3>
-            <p>There is no tracking, no analytics and no account requirement. This website sets no cookies and loads nothing from third parties.</p>
+            <p>There is no tracking, no analytics and no account requirement. This website sets no cookies and loads
+              nothing from third parties.</p>
           </li>
           <li class="card">
             <h3>Closed by default</h3>
@@ -229,7 +295,8 @@
             <p>Updating, switching channels and installing apps each have tightly scoped permissions.</p>
           </li>
         </ul>
-        <p class="note">The system checks the 10ft system repository and Flathub for updates. The 10ft repository learns nothing about you from this check.</p>
+        <p class="note">The system checks the 10ft system repository and Flathub for updates. The 10ft repository learns
+          nothing about you from this check.</p>
       </div>
     </section>
 
@@ -237,16 +304,25 @@
       <div class="wrap">
         <p class="eyebrow">Open source</p>
         <h2>Built in the open.</h2>
-        <p class="sub">10ft OS is made of several projects in the <a href="https://git.sektor64.net/10ft" rel="noopener">10ft group</a>.</p>
+        <p class="sub">10ft OS is made of several projects in the <a href="https://git.sektor64.net/10ft"
+            rel="noopener">10ft group</a>.</p>
         <ul class="projects">
-          <li><a href="https://git.sektor64.net/10ft/os" rel="noopener"><strong>os</strong><span>The bootable container OS image</span></a></li>
-          <li><a href="https://git.sektor64.net/10ft/store" rel="noopener"><strong>store</strong><span>The TV app store</span></a></li>
-          <li><a href="https://git.sektor64.net/10ft/settings" rel="noopener"><strong>settings</strong><span>TV settings and OS updates</span></a></li>
-          <li><a href="https://git.sektor64.net/10ft/oobe" rel="noopener"><strong>oobe</strong><span>First-run onboarding</span></a></li>
-          <li><a href="https://git.sektor64.net/10ft/odio-api" rel="noopener"><strong>odio-api</strong><span>Home Assistant and web remote API</span></a></li>
-          <li><a href="https://git.sektor64.net/10ft/akmods" rel="noopener"><strong>akmods</strong><span>Pre-built kernel modules</span></a></li>
-          <li><a href="https://git.sektor64.net/10ft/flatpaks" rel="noopener"><strong>flatpaks</strong><span>The 10ft Flatpak repository</span></a></li>
-          <li><a href="https://git.sektor64.net/10ft/design-guidelines" rel="noopener"><strong>design-guidelines</strong><span>The 10-foot UI design system</span></a></li>
+          <li><a href="https://git.sektor64.net/10ft/os" rel="noopener"><strong>os</strong><span>The bootable container
+                OS image</span></a></li>
+          <li><a href="https://git.sektor64.net/10ft/store" rel="noopener"><strong>store</strong><span>The TV app
+                store</span></a></li>
+          <li><a href="https://git.sektor64.net/10ft/settings" rel="noopener"><strong>settings</strong><span>TV settings
+                and OS updates</span></a></li>
+          <li><a href="https://git.sektor64.net/10ft/oobe" rel="noopener"><strong>oobe</strong><span>First-run
+                onboarding</span></a></li>
+          <li><a href="https://git.sektor64.net/10ft/odio-api" rel="noopener"><strong>odio-api</strong><span>Home
+                Assistant and web remote API</span></a></li>
+          <li><a href="https://git.sektor64.net/10ft/akmods" rel="noopener"><strong>akmods</strong><span>Pre-built
+                kernel modules</span></a></li>
+          <li><a href="https://git.sektor64.net/10ft/flatpaks" rel="noopener"><strong>flatpaks</strong><span>The 10ft
+                Flatpak repository</span></a></li>
+          <li><a href="https://git.sektor64.net/10ft/design-guidelines"
+              rel="noopener"><strong>design-guidelines</strong><span>The 10-foot UI design system</span></a></li>
         </ul>
       </div>
     </section>
@@ -261,5 +337,5 @@
 
   <script src="assets/js/main.js" defer></script>
 </body>
-</html>
 
+</html>

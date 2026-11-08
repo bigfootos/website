@@ -9,6 +9,9 @@
 # CI keyword. All URLs in `site/` are relative so the path prefix works.
 # =============================================================================
 
+include:
+  - component: $CI_SERVER_FQDN/10ft/ci-components/gitleaks@main
+
 workflow:
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
@@ -21,6 +24,7 @@ default:
     - docker
 
 stages:
+  - lint
   - test
   - deploy
 
@@ -35,6 +39,8 @@ pages:
   image: docker.io/library/alpine:latest
   resource_group: website-pages
   needs:
+    - job: lint:gitleaks
+      artifacts: false
     - job: check:site
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH

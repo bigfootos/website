@@ -1,16 +1,16 @@
 # =============================================================================
-# 10ft Website — GitLab CI/CD Pipeline
+# Bigfoot Website — GitLab CI/CD Pipeline
 # =============================================================================
 # Static site (no build step) published to GitLab Pages from `site/`.
 #
 # The Pages site must use a NON-unique domain so it is served from the group
-# Pages domain (https://10ft.pages.sector64.net/website/), like `10ft/flatpaks`.
+# Pages domain (https://bigfoot.pages.sector64.net/website/), like `bigfoot/flatpaks`.
 # That is a project setting (Deploy > Pages > "Use unique domain": off), not a
 # CI keyword. All URLs in `site/` are relative so the path prefix works.
 # =============================================================================
 
 include:
-  - component: $CI_SERVER_FQDN/10ft/ci-components/gitleaks@main
+  - component: $CI_SERVER_FQDN/bigfoot/ci-components/gitleaks@main
 
 workflow:
   rules:
@@ -48,7 +48,7 @@ pages:
   script:
     - mkdir -p public
     - cp -r site/. public/
-    - echo "GitLab Pages URL ${CI_PAGES_URL:-https://10ft.pages.sector64.net/website}"
+    - echo "GitLab Pages URL ${CI_PAGES_URL:-https://bigfoot.pages.sector64.net/website}"
   artifacts:
     paths:
       - public
@@ -57,6 +57,6 @@ docker:
   stage: deploy
   image: quay.io/buildah/stable
   script:
-    - buildah build -t git.sektor64.net:5005/10ft/website:latest .
+    - buildah build -t git.sektor64.net:5005/bigfoot/website:latest .
     - echo "${CI_REGISTRY_PASSWORD}" | buildah login -u "${CI_REGISTRY_USER}" --password-stdin "git.sektor64.net:5005"
-    - buildah push git.sektor64.net:5005/10ft/website:latest
+    - buildah push git.sektor64.net:5005/bigfoot/website:latest

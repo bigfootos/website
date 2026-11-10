@@ -1,8 +1,8 @@
-# 10ft Website (`10ft/website`)
+# Bigfoot Website (`bigfoot/website`)
 
-The official website of **10ft OS**. A dependency-free static site (plain HTML, CSS and a few lines of progressive-enhancement JavaScript) deployed with **GitLab Pages**.
+The official website of **Bigfoot OS**. A dependency-free static site (plain HTML, CSS and a few lines of progressive-enhancement JavaScript) deployed with **GitLab Pages**.
 
-It follows the [10ft design system](https://git.sektor64.net/10ft/design-guidelines) (OLED obsidian `#06070a` palette, soft-white pill actions, hairline surfaces), uses system fonts and makes no third-party requests, so visiting it is as private as running the OS.
+It follows the [Bigfoot design system](https://git.sektor64.net/bigfoot/design-guidelines) (OLED obsidian `#06070a` palette, soft-white pill actions, hairline surfaces), uses system fonts and makes no third-party requests, so visiting it is as private as running the OS.
 
 ## Layout
 
@@ -26,14 +26,14 @@ python3 -m http.server --directory site 8000   # http://localhost:8000
 
 Pushing to `main` runs the `pages` job, which publishes `site/` to:
 
-**https://10ft.pages.sector64.net/website/**
+**https://bigfoot.pages.sector64.net/website/**
 
-The project uses a **non-unique** Pages domain (like [`10ft/flatpaks`](https://git.sektor64.net/10ft/flatpaks)), so the URL is stable and human-readable instead of a generated `*-<hash>.pages…` hostname. This is configured per project under **Deploy → Pages → Use unique domain** (off), or via the API:
+The project uses a **non-unique** Pages domain (like [`bigfoot/flatpaks`](https://git.sektor64.net/bigfoot/flatpaks)), so the URL is stable and human-readable instead of a generated `*-<hash>.pages…` hostname. This is configured per project under **Deploy → Pages → Use unique domain** (off), or via the API:
 
 ```bash
 curl -X PATCH -H "PRIVATE-TOKEN: $GITLAB_TOKEN" \
   --data "pages_unique_domain_enabled=false" \
-  "$GITLAB_HOST/api/v4/projects/10ft%2Fwebsite/pages"
+  "$GITLAB_HOST/api/v4/projects/bigfoot%2Fwebsite/pages"
 ```
 
 Pages access control must also be set to **Everyone** so the public can view the site (**Settings → General → Visibility → Pages**).
@@ -41,4 +41,3 @@ Pages access control must also be set to **Everyone** so the public can view the
 ## License
 
 Apache-2.0. See [LICENSE](LICENSE).
-

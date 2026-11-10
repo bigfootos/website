@@ -4,12 +4,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>10ft OS — A free, private operating system for your TV</title>
+  <title>Bigfoot OS — A free, private operating system for your TV</title>
   <meta name="description"
-    content="10ft OS turns a computer into a smart TV you control with your TV remote. No ads, no telemetry, no account required. Open source.">
+    content="Bigfoot OS turns a computer into a smart TV you control with your TV remote. No ads, no telemetry, no account required. Open source.">
   <meta name="color-scheme" content="dark">
   <meta name="theme-color" content="#06070a">
-  <meta property="og:title" content="10ft OS — A free, private operating system for your TV">
+  <meta property="og:title" content="Bigfoot OS — A free, private operating system for your TV">
   <meta property="og:description"
     content="No ads. No telemetry. No account. An open-source TV operating system built for the couch.">
   <meta property="og:type" content="website">
@@ -23,9 +23,9 @@
 
   <header class="nav">
     <div class="wrap nav-inner">
-      <a class="brand" href="#top" aria-label="10ft OS home">
+      <a class="brand" href="#top" aria-label="Bigfoot OS home">
         <img src="assets/img/logo.svg" alt="" width="28" height="28">
-        <span>10ft <em>OS</em></span>
+        <span>Bigfoot <em>OS</em></span>
       </a>
       <nav aria-label="Primary">
         <a href="#features">Features</a>
@@ -42,13 +42,13 @@
       <div class="wrap hero-inner">
         <p class="eyebrow">Open-source television OS</p>
         <h1>A smart TV that<br>works for you.</h1>
-        <p class="lede">10ft OS turns a computer into a TV you control with your remote.<br>No ads. No telemetry. No account.</p>
+        <p class="lede">Bigfoot OS turns a computer into a TV you control with your remote.<br>No ads. No telemetry. No account.</p>
         <div class="cta-row">
-          <a class="btn primary" href="#install">Install 10ft OS</a>
-          <a class="btn" href="https://git.sektor64.net/10ft" rel="noopener">View source</a>
+          <a class="btn primary" href="#install">Install Bigfoot OS</a>
+          <a class="btn" href="https://git.sektor64.net/bigfoot" rel="noopener">View source</a>
         </div>
         <figure class="hero-shot">
-          <img src="assets/img/home.png" width="1920" height="1080" alt="10ft OS home screen">
+          <img src="assets/img/home.png" width="1920" height="1080" alt="Bigfoot OS home screen">
         </figure>
       </div>
     </section>
@@ -97,7 +97,7 @@
         <div class="shots">
           <figure>
             <img src="assets/img/auto-pairing.png" width="1920" height="1080" loading="lazy"
-              alt="10ft OS discovering and pairing a Bluetooth remote automatically">
+              alt="Bigfoot OS discovering and pairing a Bluetooth remote automatically">
             <figcaption>Remotes pair themselves.</figcaption>
           </figure>
           <figure>
@@ -166,7 +166,7 @@
             <p>Get the installer for your computer.
             </p>
             <p>
-              <a class="btn primary" href="https://git.sektor64.net/groups/10ft/-/packages/12" rel="noopener">Download
+              <a class="btn primary" href="https://git.sektor64.net/bigfoot/os/-/packages" rel="noopener">Download
                 installer</a>
             </p>
           </li>
@@ -177,7 +177,7 @@
                 href="https://www.raspberrypi.com/software/" rel="noopener">Raspberry Pi Imager</a> or the command line.
               Replace <code>/dev/sdX</code> with your USB device. This erases it.</p>
             <div class="code">
-              <pre><code id="dd-cmd">sudo dd if=10ft-os-amd64-netinstall.iso of=/dev/sdX bs=4M status=progress conv=fsync</code></pre>
+              <pre><code id="dd-cmd">sudo dd if=bigfoot-os-amd64-netinstall.iso of=/dev/sdX bs=4M status=progress conv=fsync</code></pre>
               <button type="button" class="copy" data-copy="dd-cmd" hidden>Copy</button>
             </div>
           </li>
@@ -297,7 +297,7 @@
             <p>System updates are atomic, don't let a buggy update ruin your evening.</p>
           </li>
         </ul>
-        <p class="note">The system checks the 10ft system repository and Flathub for updates. The 10ft repository learns
+        <p class="note">The system checks the Bigfoot system repository and Flathub for updates. The Bigfoot repository learns
           nothing about you from this check.</p>
       </div>
     </section>
@@ -306,24 +306,28 @@
       <div class="wrap">
         <p class="eyebrow">Open source</p>
         <h2>Built in the open.</h2>
-        <p class="sub">10ft OS is made of several projects in the <a href="https://git.sektor64.net/10ft"
-            rel="noopener">10ft group</a>.</p>
+        <p class="sub">Bigfoot OS is made of several projects in the <a href="https://git.sektor64.net/bigfoot"
+            rel="noopener">Bigfoot group</a>.</p>
         <ul class="projects">
-          <li><a href="https://git.sektor64.net/10ft/os" rel="noopener"><strong>os</strong><span>The bootable container
+          <li><a href="https://git.sektor64.net/bigfoot/os" rel="noopener"><strong>os</strong><span>The bootable container
                 OS image</span></a></li>
-          <li><a href="https://git.sektor64.net/10ft/store" rel="noopener"><strong>store</strong><span>The TV app
+          <li><a href="https://git.sektor64.net/bigfoot/appdrawer" rel="noopener"><strong>appdrawer</strong><span>The TV
+                homescreen and OSD</span></a></li>
+          <li><a href="https://git.sektor64.net/bigfoot/store" rel="noopener"><strong>store</strong><span>The TV app
                 store</span></a></li>
-          <li><a href="https://git.sektor64.net/10ft/settings" rel="noopener"><strong>settings</strong><span>TV settings
+          <li><a href="https://git.sektor64.net/bigfoot/settings" rel="noopener"><strong>settings</strong><span>TV settings
                 and OS updates</span></a></li>
-          <li><a href="https://git.sektor64.net/10ft/oobe" rel="noopener"><strong>oobe</strong><span>First-run
+          <li><a href="https://git.sektor64.net/bigfoot/oobe" rel="noopener"><strong>oobe</strong><span>First-run
                 onboarding</span></a></li>
-          <li><a href="https://git.sektor64.net/10ft/odio-api" rel="noopener"><strong>odio-api</strong><span>Home
+          <li><a href="https://git.sektor64.net/bigfoot/audio-dsp" rel="noopener"><strong>audio-dsp</strong><span>Adaptive
+                surround-to-stereo DSP</span></a></li>
+          <li><a href="https://git.sektor64.net/bigfoot/odio-api" rel="noopener"><strong>odio-api</strong><span>Home
                 Assistant and web remote API</span></a></li>
-          <li><a href="https://git.sektor64.net/10ft/akmods" rel="noopener"><strong>akmods</strong><span>Pre-built
+          <li><a href="https://git.sektor64.net/bigfoot/akmods" rel="noopener"><strong>akmods</strong><span>Pre-built
                 kernel modules</span></a></li>
-          <li><a href="https://git.sektor64.net/10ft/flatpaks" rel="noopener"><strong>flatpaks</strong><span>The 10ft
+          <li><a href="https://git.sektor64.net/bigfoot/flatpaks" rel="noopener"><strong>flatpaks</strong><span>The Bigfoot
                 Flatpak repository</span></a></li>
-          <li><a href="https://git.sektor64.net/10ft/design-guidelines"
+          <li><a href="https://git.sektor64.net/bigfoot/design-guidelines"
               rel="noopener"><strong>design-guidelines</strong><span>The 10-foot UI design system</span></a></li>
         </ul>
       </div>
@@ -332,9 +336,9 @@
 
   <footer class="footer">
     <div class="wrap footer-inner">
-      <p>10ft OS is open source. ©sektor64.net
+      <p>Bigfoot OS is open source. ©sektor64.net
       </p>
-      <p><a href="https://git.sektor64.net/10ft/website" rel="noopener">Edit this page</a></p>
+      <p><a href="https://git.sektor64.net/bigfoot/website" rel="noopener">Edit this page</a></p>
     </div>
   </footer>
 

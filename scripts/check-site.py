@@ -14,22 +14,26 @@ from urllib.parse import urlparse
 
 SITE = Path(__file__).resolve().parent.parent / "site"
 LOAD_ATTRS = {("link", "href"), ("script", "src"), ("img", "src"), ("source", "src"), ("iframe", "src")}
+# <link rel="..."> tokens that declare page metadata and are never fetched by browsers.
+PASSIVE_LINK_RELS = {"canonical"}
 
 
 class Collector(HTMLParser):
     def __init__(self):
         super().__init__()
         self.ids = set()
-        self.refs = []  # (tag, attr, value)
+        self.refs = []  # (tag, attr, value, rels)
 
     def handle_starttag(self, tag, attrs):
+        attr_map = {name: value for name, value in attrs if value is not None}
+        rels = frozenset(attr_map.get("rel", "").lower().split())
         for name, value in attrs:
             if value is None:
                 continue
             if name == "id":
                 self.ids.add(value)
             elif name in ("href", "src"):
-                self.refs.append((tag, name, value))
+                self.refs.append((tag, name, value, rels))
 
 
 def main() -> int:
@@ -46,10 +50,11 @@ def main() -> int:
 
     for page, collector in parsed.items():
         rel = page.relative_to(SITE)
-        for tag, attr, value in collector.refs:
+        for tag, attr, value, rels in collector.refs:
             url = urlparse(value)
             if url.scheme in ("http", "https"):
-                if (tag, attr) in LOAD_ATTRS:
+                is_passive_link = tag == "link" and bool(rels) and rels <= PASSIVE_LINK_RELS
+                if (tag, attr) in LOAD_ATTRS and not is_passive_link:
                     errors.append(f"{rel}: <{tag}> loads external resource {value}")
                 continue
             if url.scheme in ("mailto", "tel"):

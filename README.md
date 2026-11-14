@@ -11,7 +11,7 @@ It follows the [Bigfoot design system](https://git.sektor64.net/bigfoot/design-g
 | [`site/`](site) | Everything that gets published. `index.html`, `assets/`, `robots.txt`, `sitemap.xml`. |
 | [`scripts/build-assets.sh`](scripts/build-assets.sh) | Renders derived WebP images and favicons from source SVGs/PNGs. |
 | [`scripts/check-site.py`](scripts/check-site.py) | Verifies local links, `srcset` assets, JSON-LD and anchors resolve and that nothing loads external resources. |
-| [`.gitlab-ci.yml`](.gitlab-ci.yml) | `build:assets` + `check:site` on every pipeline, `pages` and `docker` deploy on `main`. |
+| [`.gitlab-ci.yml`](.gitlab-ci.yml) | `build:assets` + `check:site` + `check:w3c` on every pipeline, `pages` and `docker` deploy on `main`. |
 
 ## Local preview
 

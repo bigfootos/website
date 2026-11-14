@@ -4,19 +4,62 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bigfoot OS — A free, private operating system for your TV</title>
-  <link rel="canonical" href="https://bigfoot.sektor64.net/" />
+  <title>Bigfoot OS — Open-Source Linux Smart TV Operating System</title>
+  <link rel="canonical" href="https://bigfoot.sektor64.net/">
   <meta name="description"
-    content="Bigfoot OS turns a computer into a smart TV you control with your TV remote. No ads, no telemetry, no account required. Open source.">
+    content="Free, telemetry-free Linux smart TV OS and Google TV alternative for mini-PCs. Run Jellyfin, Kodi and Flatpak apps with your TV remote—no ads or accounts.">
   <meta name="color-scheme" content="dark">
   <meta name="theme-color" content="#06070a">
-  <meta property="og:title" content="Bigfoot OS — A free, private operating system for your TV">
-  <meta property="og:description"
-    content="No ads. No telemetry. No account. An open-source TV operating system built for the couch.">
+  <meta property="og:site_name" content="Bigfoot OS">
+  <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/img/pairing.png">
+  <meta property="og:url" content="https://bigfoot.sektor64.net/">
+  <meta property="og:title" content="Bigfoot OS — Open-Source Linux Smart TV Operating System">
+  <meta property="og:description"
+    content="Turn a mini-PC or computer into a smart TV you control with your remote. Free, open-source alternative to Google TV—no ads, no telemetry, no account.">
+  <meta property="og:image" content="https://bigfoot.sektor64.net/assets/img/home.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1920">
+  <meta property="og:image:height" content="1080">
+  <meta property="og:image:alt" content="Bigfoot OS 10-foot television home screen">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bigfoot OS — Open-Source Linux Smart TV Operating System">
+  <meta name="twitter:description"
+    content="Turn a mini-PC or computer into a smart TV you control with your remote. No ads. No telemetry. No account.">
+  <meta name="twitter:image" content="https://bigfoot.sektor64.net/assets/img/home.png">
+  <meta name="twitter:image:alt" content="Bigfoot OS 10-foot television home screen">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-48x48.png" type="image/png" sizes="48x48">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Bigfoot OS",
+      "url": "https://bigfoot.sektor64.net/",
+      "description": "An open-source, telemetry-free Linux smart TV operating system that turns a mini-PC or computer into a privacy-respecting television interface controlled with your TV remote.",
+      "applicationCategory": "OperatingSystem",
+      "operatingSystem": "Linux",
+      "softwareHelp": "https://bigfoot.sektor64.net/#install",
+      "downloadUrl": "https://git.sektor64.net/bigfoot/os/-/packages",
+      "codeRepository": "https://git.sektor64.net/bigfoot",
+      "license": "https://www.apache.org/licenses/LICENSE-2.0",
+      "screenshot": "https://bigfoot.sektor64.net/assets/img/home.png",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Bigfoot OS",
+        "url": "https://bigfoot.sektor64.net/",
+        "logo": "https://bigfoot.sektor64.net/apple-touch-icon.png"
+      }
+    }
+  </script>
 </head>
 
 <body>
@@ -32,7 +75,7 @@
         <a href="#features">Features</a>
         <a href="#how-it-works">How it works</a>
         <a href="#install">Install</a>
-        <a target="_blank" href="https://matrix.to/#/#bigfoot:sektor64.net">Chat on Matrix</a>
+        <a target="_blank" rel="noopener" href="https://matrix.to/#/#bigfoot:sektor64.net">Chat on Matrix</a>
         <a href="#privacy">Privacy</a>
       </nav>
     </div>
@@ -41,15 +84,19 @@
   <main id="main">
     <section class="hero" id="top">
       <div class="wrap hero-inner">
-        <p class="eyebrow">Open-source television OS</p>
+        <p class="eyebrow">Open-source Linux television OS</p>
         <h1>A smart TV that<br>works for you.</h1>
-        <p class="lede">Bigfoot OS turns a computer into a TV you control with your remote.<br>No ads. No telemetry. No account.</p>
+        <p class="lede">Bigfoot OS turns a mini-PC or computer into a TV you control with your remote—a private alternative to Google TV.<br>No ads. No telemetry. No account.</p>
         <div class="cta-row">
           <a class="btn primary" href="#install">Install Bigfoot OS</a>
           <a class="btn" href="https://git.sektor64.net/bigfoot" rel="noopener">View source</a>
         </div>
         <figure class="hero-shot">
-          <img src="assets/img/home.png" width="1920" height="1080" alt="Bigfoot OS home screen">
+          <picture>
+            <source srcset="assets/img/home.webp" type="image/webp">
+            <img src="assets/img/home.png" width="1920" height="1080" fetchpriority="high" decoding="async"
+              alt="Bigfoot OS 10-foot television home screen">
+          </picture>
         </figure>
       </div>
     </section>
@@ -62,7 +109,7 @@
         <ul class="grid">
           <li class="card">
             <h3>Big-screen launcher</h3>
-            <p>Boots straight into a TV interface. No desktop, no login screen.</p>
+            <p>Boots straight into a Wayland 10-foot TV interface. No desktop, no login screen.</p>
           </li>
           <li class="card">
             <h3>Your remote just works</h3>
@@ -74,7 +121,7 @@
           </li>
           <li class="card">
             <h3>App Store</h3>
-            <p>Installing a new app is just 1 click away from the home screen. No accounts needed.</p>
+            <p>Install Flatpak apps like Kodi, Jellyfin, MPV, VLC and VacuumTube in 1 click from the home screen. No accounts needed.</p>
           </li>
           <li class="card">
             <h3>Easy updates</h3>
@@ -91,24 +138,33 @@
           </li>
           <li class="card">
             <h3>Hardware video decoding</h3>
-            <p>Smooth 4K HEVC and AV1 playback on AMD and Intel graphics.</p>
+            <p>Smooth 4K HEVC and AV1 playback on AMD and Intel graphics for home theater PCs (HTPCs) and mini-PCs.</p>
           </li>
         </ul>
 
         <div class="shots">
           <figure>
-            <img src="assets/img/auto-pairing.png" width="1920" height="1080" loading="lazy"
-              alt="Bigfoot OS discovering and pairing a Bluetooth remote automatically">
+            <picture>
+              <source srcset="assets/img/auto-pairing.webp" type="image/webp">
+              <img src="assets/img/auto-pairing.png" width="1920" height="1080" loading="lazy" decoding="async"
+                alt="Bigfoot OS discovering and pairing a Bluetooth remote automatically">
+            </picture>
             <figcaption>Remotes pair themselves.</figcaption>
           </figure>
           <figure>
-            <img src="assets/img/language.png" width="1920" height="1080" loading="lazy"
-              alt="Choosing a language during first-run setup">
+            <picture>
+              <source srcset="assets/img/language.webp" type="image/webp">
+              <img src="assets/img/language.png" width="1920" height="1080" loading="lazy" decoding="async"
+                alt="Choosing a language during first-run setup">
+            </picture>
             <figcaption>Pick your language.</figcaption>
           </figure>
           <figure>
-            <img src="assets/img/sound.png" width="1920" height="1080" loading="lazy"
-              alt="Choosing a sound output during first-run setup">
+            <picture>
+              <source srcset="assets/img/sound.webp" type="image/webp">
+              <img src="assets/img/sound.png" width="1920" height="1080" loading="lazy" decoding="async"
+                alt="Choosing a sound output during first-run setup">
+            </picture>
             <figcaption>Choose where the sound plays.</figcaption>
           </figure>
         </div>
@@ -119,8 +175,6 @@
       <div class="wrap">
         <p class="eyebrow">3 golden rules, aligned with the goal of</p>
         <h2>stable and zero distraction television</h2>
-        <p class="sub">
-        </p>
         <ol class="layers">
           <li>
             <span class="layer-n">1</span>

@@ -52,9 +52,4 @@
   <rect x="78" y="132" width="356" height="200" rx="30" stroke="#ffffff" stroke-opacity="0.06" stroke-width="2"/>
   <!-- Detached Floating Pedestal -->
   <line x1="186" y1="386" x2="326" y2="386" stroke="#f4f4f6" stroke-opacity="0.54" stroke-width="11.5" stroke-linecap="round"/>
-  <!-- Bigfoot Brand Wordmark -->
-  <text x="256" y="255" text-anchor="middle"
-        font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', 'Segoe UI', system-ui, sans-serif"
-        font-size="82" font-weight="600" letter-spacing="-2.4" fill="url(#ctaFill)">Bigfoot</text>
-
 </svg>

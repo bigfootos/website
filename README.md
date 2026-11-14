@@ -8,13 +8,15 @@ It follows the [Bigfoot design system](https://git.sektor64.net/bigfoot/design-g
 
 | Path | Purpose |
 | :--- | :--- |
-| [`site/`](site) | Everything that gets published. `index.html`, `assets/`, `favicon.svg`. |
-| [`scripts/check-site.py`](scripts/check-site.py) | Verifies local links and anchors resolve and that nothing loads external resources. |
-| [`.gitlab-ci.yml`](.gitlab-ci.yml) | `check:site` on every pipeline, `pages` deploy on `main`. |
+| [`site/`](site) | Everything that gets published. `index.html`, `assets/`, `robots.txt`, `sitemap.xml`. |
+| [`scripts/build-assets.sh`](scripts/build-assets.sh) | Renders derived WebP images and favicons from source SVGs/PNGs. |
+| [`scripts/check-site.py`](scripts/check-site.py) | Verifies local links, `srcset` assets, JSON-LD and anchors resolve and that nothing loads external resources. |
+| [`.gitlab-ci.yml`](.gitlab-ci.yml) | `build:assets` + `check:site` on every pipeline, `pages` and `docker` deploy on `main`. |
 
 ## Local preview
 
 ```bash
+./scripts/build-assets.sh
 python3 scripts/check-site.py
 python3 -m http.server --directory site 8000   # http://localhost:8000
 ```

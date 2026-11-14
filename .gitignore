@@ -1,3 +1,7 @@
 /public/
+/site/favicon.svg
+/site/favicon-48x48.png
+/site/apple-touch-icon.png
+/site/assets/img/*.webp
 __pycache__/
 .DS_Store

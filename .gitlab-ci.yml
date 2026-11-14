@@ -1,7 +1,10 @@
 # =============================================================================
 # Bigfoot Website — GitLab CI/CD Pipeline
 # =============================================================================
-# Static site (no build step) published to GitLab Pages from `site/`.
+# Static site published to GitLab Pages and the container registry from `site/`.
+# Derived WebP screenshots and favicon PNGs are rendered in CI by
+# `scripts/build-assets.sh` so swapping source SVGs/PNGs never leaves stale
+# assets behind.
 #
 # The Pages site must use a NON-unique domain so it is served from the group
 # Pages domain (https://bigfoot.pages.sector64.net/website/), like `bigfoot/flatpaks`.
@@ -25,12 +28,32 @@ default:
 
 stages:
   - lint
+  - build
   - test
   - deploy
+
+build:assets:
+  stage: build
+  image: docker.io/library/alpine:latest
+  before_script:
+    - apk add --no-cache libwebp-tools rsvg-convert
+  script:
+    - sh scripts/build-assets.sh
+  artifacts:
+    paths:
+      - site/favicon.svg
+      - site/favicon-48x48.png
+      - site/apple-touch-icon.png
+      - site/assets/img/*.png
+      - site/assets/img/*.webp
+    expire_in: 1 day
 
 check:site:
   stage: test
   image: docker.io/library/python:3-alpine
+  needs:
+    - job: build:assets
+      artifacts: true
   script:
     - python3 scripts/check-site.py
 
@@ -41,7 +64,10 @@ pages:
   needs:
     - job: lint:gitleaks
       artifacts: false
+    - job: build:assets
+      artifacts: true
     - job: check:site
+      artifacts: false
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
     - if: $CI_PIPELINE_SOURCE == "web"
@@ -56,6 +82,11 @@ pages:
 docker:
   stage: deploy
   image: quay.io/buildah/stable
+  needs:
+    - job: lint:gitleaks
+      artifacts: false
+    - job: check:site
+      artifacts: false
   script:
     - buildah build -t git.sektor64.net:5005/bigfoot/website:latest .
     - echo "${CI_REGISTRY_PASSWORD}" | buildah login -u "${CI_REGISTRY_USER}" --password-stdin "git.sektor64.net:5005"

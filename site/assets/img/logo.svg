@@ -1,265 +1,56 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   viewBox="0 0 512 512"
-   width="512"
-   height="512"
-   fill="none"
-   version="1.1"
-   id="svg22"
-   sodipodi:docname="logo.svg"
-   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
-     id="namedview22"
-     pagecolor="#ffffff"
-     bordercolor="#000000"
-     borderopacity="0.25"
-     inkscape:showpageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="1.1992426"
-     inkscape:cx="262.24885"
-     inkscape:cy="221.80666"
-     inkscape:window-width="1307"
-     inkscape:window-height="635"
-     inkscape:window-x="0"
-     inkscape:window-y="35"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="svg22" />
-  <defs
-     id="defs18">
-    <linearGradient
-       id="canvasBg"
-       x1="256"
-       y1="0"
-       x2="256"
-       y2="512"
-       gradientUnits="userSpaceOnUse">
-      <stop
-         offset="0%"
-         stop-color="#11141d"
-         id="stop1" />
-      <stop
-         offset="55%"
-         stop-color="#080a0f"
-         id="stop2" />
-      <stop
-         offset="100%"
-         stop-color="#06070a"
-         id="stop3" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" fill="none">
+  <defs>
+    <linearGradient id="canvasBg" x1="256" y1="0" x2="256" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#11141d"/>
+      <stop offset="55%" stop-color="#080a0f"/>
+      <stop offset="100%" stop-color="#06070a"/>
     </linearGradient>
-    <radialGradient
-       id="stageBloom"
-       cx="256"
-       cy="248"
-       r="256"
-       gradientUnits="userSpaceOnUse">
-      <stop
-         offset="0%"
-         stop-color="#ffffff"
-         stop-opacity="0.062"
-         id="stop4" />
-      <stop
-         offset="52%"
-         stop-color="#7dd3fc"
-         stop-opacity="0.016"
-         id="stop5" />
-      <stop
-         offset="100%"
-         stop-color="#06070a"
-         stop-opacity="0"
-         id="stop6" />
+    <radialGradient id="stageBloom" cx="256" cy="248" r="256" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.062"/>
+      <stop offset="52%" stop-color="#7dd3fc" stop-opacity="0.016"/>
+      <stop offset="100%" stop-color="#06070a" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient
-       id="zenithGlow"
-       cx="256"
-       cy="36"
-       r="320"
-       gradientUnits="userSpaceOnUse">
-      <stop
-         offset="0%"
-         stop-color="#93c5fd"
-         stop-opacity="0.032"
-         id="stop7" />
-      <stop
-         offset="100%"
-         stop-color="#06070a"
-         stop-opacity="0"
-         id="stop8" />
+    <radialGradient id="zenithGlow" cx="256" cy="36" r="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#93c5fd" stop-opacity="0.032"/>
+      <stop offset="100%" stop-color="#06070a" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient
-       id="rimStroke"
-       x1="256"
-       y1="92"
-       x2="256"
-       y2="420"
-       gradientUnits="userSpaceOnUse">
-      <stop
-         offset="0%"
-         stop-color="#f5f5f7"
-         stop-opacity="0.96"
-         id="stop9" />
-      <stop
-         offset="100%"
-         stop-color="#d8dce3"
-         stop-opacity="0.54"
-         id="stop10" />
+    <linearGradient id="rimStroke" x1="256" y1="92" x2="256" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f5f5f7" stop-opacity="0.96"/>
+      <stop offset="100%" stop-color="#d8dce3" stop-opacity="0.54"/>
     </linearGradient>
-    <linearGradient
-       id="glassFill"
-       x1="256"
-       y1="96"
-       x2="256"
-       y2="416"
-       gradientUnits="userSpaceOnUse">
-      <stop
-         offset="0%"
-         stop-color="#ffffff"
-         stop-opacity="0.078"
-         id="stop11" />
-      <stop
-         offset="100%"
-         stop-color="#ffffff"
-         stop-opacity="0.026"
-         id="stop12" />
+    <linearGradient id="glassFill" x1="256" y1="96" x2="256" y2="416" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.078"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.026"/>
     </linearGradient>
-    <linearGradient
-       id="glassFillStrong"
-       x1="256"
-       y1="96"
-       x2="256"
-       y2="416"
-       gradientUnits="userSpaceOnUse">
-      <stop
-         offset="0%"
-         stop-color="#ffffff"
-         stop-opacity="0.125"
-         id="stop13" />
-      <stop
-         offset="100%"
-         stop-color="#ffffff"
-         stop-opacity="0.042"
-         id="stop14" />
+    <linearGradient id="glassFillStrong" x1="256" y1="96" x2="256" y2="416" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.125"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.042"/>
     </linearGradient>
-    <linearGradient
-       id="glassBorder"
-       x1="256"
-       y1="96"
-       x2="256"
-       y2="416"
-       gradientUnits="userSpaceOnUse">
-      <stop
-         offset="0%"
-         stop-color="#f4f4f6"
-         stop-opacity="0.58"
-         id="stop15" />
-      <stop
-         offset="100%"
-         stop-color="#f4f4f6"
-         stop-opacity="0.24"
-         id="stop16" />
+    <linearGradient id="glassBorder" x1="256" y1="96" x2="256" y2="416" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f4f4f6" stop-opacity="0.58"/>
+      <stop offset="100%" stop-color="#f4f4f6" stop-opacity="0.24"/>
     </linearGradient>
-    <linearGradient
-       id="ctaFill"
-       x1="256"
-       y1="92"
-       x2="256"
-       y2="420"
-       gradientUnits="userSpaceOnUse">
-      <stop
-         offset="0%"
-         stop-color="#ffffff"
-         id="stop17" />
-      <stop
-         offset="100%"
-         stop-color="#e8eaef"
-         id="stop18" />
+    <linearGradient id="ctaFill" x1="256" y1="92" x2="256" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e8eaef"/>
     </linearGradient>
-    <filter
-       id="ctaGlow"
-       x="-0.092307692"
-       y="-0.15849057"
-       width="1.1846154"
-       height="1.3169811">
-      <feGaussianBlur
-         stdDeviation="14"
-         result="blur"
-         id="feGaussianBlur18" />
+    <filter id="ctaGlow" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
     </filter>
+
   </defs>
   <!-- OLED Obsidian Stage -->
-  <rect
-     width="512"
-     height="512"
-     fill="url(#canvasBg)"
-     id="rect18" />
-  <circle
-     cx="256"
-     cy="248"
-     r="256"
-     fill="url(#stageBloom)"
-     id="circle18" />
-  <circle
-     cx="256"
-     cy="36"
-     r="320"
-     fill="url(#zenithGlow)"
-     id="circle19" />
+  <rect width="512" height="512" fill="url(#canvasBg)"/>
+  <circle cx="256" cy="248" r="256" fill="url(#stageBloom)"/>
+  <circle cx="256" cy="36" r="320" fill="url(#zenithGlow)"/>
+
   <!-- Ambient screen halo -->
-  <rect
-     x="74"
-     y="128"
-     width="364"
-     height="212"
-     rx="38"
-     fill="#ffffff"
-     fill-opacity="0.045"
-     filter="url(#ctaGlow)"
-     id="rect19" />
+  <rect x="74" y="128" width="364" height="212" rx="38" fill="#ffffff" fill-opacity="0.045" filter="url(#ctaGlow)"/>
   <!-- Signature 16:9 Floating Television Bezel -->
-  <rect
-     x="64"
-     y="118"
-     width="384"
-     height="228"
-     rx="42"
-     fill="#0b0d13"
-     fill-opacity="0.72"
-     id="rect20" />
-  <rect
-     x="64"
-     y="118"
-     width="384"
-     height="228"
-     rx="42"
-     fill="url(#glassFill)"
-     stroke="url(#rimStroke)"
-     stroke-width="12.5"
-     id="rect21" />
-  <rect
-     x="78"
-     y="132"
-     width="356"
-     height="200"
-     rx="30"
-     stroke="#ffffff"
-     stroke-opacity="0.06"
-     stroke-width="2"
-     id="rect22" />
+  <rect x="64" y="118" width="384" height="228" rx="42" fill="#0b0d13" fill-opacity="0.72"/>
+  <rect x="64" y="118" width="384" height="228" rx="42" fill="url(#glassFill)" stroke="url(#rimStroke)" stroke-width="12.5"/>
+  <rect x="78" y="132" width="356" height="200" rx="30" stroke="#ffffff" stroke-opacity="0.06" stroke-width="2"/>
   <!-- Detached Floating Pedestal -->
-  <line
-     x1="186"
-     y1="386"
-     x2="326"
-     y2="386"
-     stroke="#f4f4f6"
-     stroke-opacity="0.54"
-     stroke-width="11.5"
-     stroke-linecap="round"
-     id="line22" />
-  <!-- Bigfoot Brand Wordmark -->
+  <line x1="186" y1="386" x2="326" y2="386" stroke="#f4f4f6" stroke-opacity="0.54" stroke-width="11.5" stroke-linecap="round"/>
+
 </svg>

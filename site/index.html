@@ -141,60 +141,6 @@
           "publisher": {
             "@id": "https://bigfoot.sektor64.net/#organization"
           }
-        },
-        {
-          "@type": "FAQPage",
-          "@id": "https://bigfoot.sektor64.net/#faq-schema",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What hardware do I need to run Bigfoot OS?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Any 64-bit (x86_64) mini-PC, home theater PC (HTPC), desktop, or laptop with AMD or Intel graphics, 4 GB of RAM, 16 GB of storage, and an HDMI output. An ARM64 (aarch64) build is also available for virtual machines such as UTM on Apple Silicon."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How is Bigfoot OS different from Google TV, Android TV, or LibreELEC?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Unlike Google TV, Android TV, or Fire TV, Bigfoot OS shows zero ads, collects zero telemetry, and never asks for an account. Unlike single-app appliances such as LibreELEC, it boots into a complete Wayland 10-foot television shell with a one-click Flatpak app store and atomic bootc system updates."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Which TV remotes and game controllers work out of the box?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Most regular TV remotes work over HDMI-CEC on supported hardware or with a Pulse-Eight USB-CEC adapter. Bluetooth remotes—including the Chromecast with Google TV Remote and Amazon Fire TV Remote—pair automatically during first-run setup with built-in infrared (IR) TV volume and power programming, alongside Xbox wireless controllers and smartphones via KDE Connect."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Which media, streaming, and gaming apps can I install?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "The built-in Store installs 10-foot Flatpak apps in one click without an account, including Kodi, Jellyfin, Plex HTPC, VacuumTube (for ad-free YouTube), ARTE.tv, Steam, Moonlight, RetroArch, Chiaki4deck, and PPSSPP, plus additional Linux apps from Flathub."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Does Bigfoot OS support 4K video decoding and surround sound?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. Bigfoot OS includes hardware-accelerated 4K HEVC and AV1 video decoding on AMD and Intel GPUs, PipeWire HDMI audio passthrough, and a built-in adaptive surround-to-stereo downmix DSP (Cinema, Balanced, and Night presets) that keeps dialogue clear on stereo TV speakers."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What happens if a system update goes wrong?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Bigfoot OS is built on Fedora Atomic (bootc) read-only container images. Updates download quietly in the background and apply on reboot while keeping the previous deployment intact, so you can roll back in seconds from Settings or the boot menu."
-              }
-            }
-          ]
         }
       ]
     }
@@ -214,8 +160,7 @@
         <a href="#features">Features</a>
         <a href="#concept">Concept</a>
         <a href="#install">Install</a>
-        <a href="#privacy">Privacy</a>
-        <a href="#faq">FAQ</a>
+        <a href="#projects">Open Source</a>
         <a href="https://git.sektor64.net/bigfoot/os/-/wikis/home" rel="noopener">Docs</a>
         <a target="_blank" rel="noopener" href="https://matrix.to/#/%23bigfoot:sektor64.net">Chat on Matrix</a>
       </nav>
@@ -254,23 +199,19 @@
             <p>Boots straight into a Wayland 10-foot TV interface. No desktop, no login screen.</p>
           </li>
           <li class="card">
-            <h3>Your remote just works</h3>
-            <p>HDMI-CEC is on by default, so the remote that came with your TV most probably works too. Bluetooth
-              remotes (like the Google or the Fire TV Remote) and Xbox controllers are tested and working.</p>
-          </li>
-          <li class="card">
-            <h3>Guided first-run setup</h3>
-            <p>Your remote is paired automatically. The first-run assistant guides you through it.</p>
-          </li>
-          <li class="card">
             <h3>App Store</h3>
             <p>Install Flatpak apps like Kodi, Jellyfin, Plex HTPC, VacuumTube, ARTE.tv, Steam, Moonlight and RetroArch
-              in 1 click from the home screen. No accounts needed.</p>
+              in 1 click from the home screen.</p>
           </li>
           <li class="card">
-            <h3>Easy updates</h3>
-            <p>Updates download in the background and apply on reboot. If one misbehaves, roll back to the previous
-              version.</p>
+            <h3>4K video &amp; cinema audio</h3>
+            <p>Hardware-accelerated 4K HEVC and AV1 decoding on AMD and Intel graphics, HDMI audio passthrough, and
+              adaptive surround-to-stereo downmix presets.</p>
+          </li>
+          <li class="card">
+            <h3>Your remote just works</h3>
+            <p>HDMI-CEC is on by default for your regular TV remote, alongside automatic Bluetooth remote pairing and
+              Xbox controller support.</p>
           </li>
           <li class="card">
             <h3>Phone as remote</h3>
@@ -279,40 +220,9 @@
           </li>
           <li class="card">
             <h3>Home Assistant</h3>
-            <p>Optional integration to control playback, volume and TV power from Home Assistant.</p>
-          </li>
-          <li class="card">
-            <h3>Hardware video decoding</h3>
-            <p>Smooth 4K HEVC and AV1 playback on AMD and Intel graphics for home theater PCs (HTPCs) and mini-PCs.</p>
+            <p>Opt-in local integration to control media playback, volume and TV power from Home Assistant.</p>
           </li>
         </ul>
-
-        <div class="shots">
-          <figure>
-            <picture>
-              <source srcset="assets/img/auto-pairing.webp" type="image/webp">
-              <img src="assets/img/auto-pairing.png" width="1920" height="1080" loading="lazy" decoding="async"
-                alt="Bigfoot OS discovering and pairing a Bluetooth TV remote automatically">
-            </picture>
-            <figcaption>Remotes pair themselves.</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source srcset="assets/img/language.webp" type="image/webp">
-              <img src="assets/img/language.png" width="1920" height="1080" loading="lazy" decoding="async"
-                alt="Choosing a display language during Bigfoot OS first-run setup">
-            </picture>
-            <figcaption>Pick your language.</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source srcset="assets/img/sound.webp" type="image/webp">
-              <img src="assets/img/sound.png" width="1920" height="1080" loading="lazy" decoding="async"
-                alt="Selecting HDMI eARC or S/PDIF audio output during Bigfoot OS first-run setup">
-            </picture>
-            <figcaption>Choose where the sound plays.</figcaption>
-          </figure>
-        </div>
       </div>
     </section>
 
@@ -325,16 +235,19 @@
             <span class="layer-n">1</span>
             <div>
               <h3>A solid base to build on</h3>
-              <p>In a perfect reality, updates never break your system. We are pretty much there.<br>
-                bootc allows bringing it back to an earlier state. If an update misbehaves, roll it back!
+              <p>The read-only system image is verified with Sigstore signatures and can’t be modified by accident.
+                Updates download quietly in the background and apply on reboot—if an update ever misbehaves,
+                <code>bootc</code> lets you roll it back to the previous version in seconds.
               </p>
             </div>
           </li>
           <li>
             <span class="layer-n">2</span>
             <div>
-              <h3>No attention seeking</h3>
-              <p>No recommendations, no ads. No tricks, no dark patterns.
+              <h3>No attention seeking, nothing phones home</h3>
+              <p>No recommendations, no ads, no dark patterns, no tracking, and no account requirement. Integrations
+                stay disabled until you enable them, and this website sets no cookies and loads nothing from third
+                parties.
               </p>
             </div>
           </li>
@@ -349,6 +262,8 @@
             </div>
           </li>
         </ol>
+        <p class="note">The system only checks the Bigfoot system repository and Flathub for updates. The Bigfoot
+          repository learns nothing about you from this check.</p>
       </div>
     </section>
 
@@ -387,9 +302,37 @@
           </li>
           <li>
             <h3>Follow the setup wizard</h3>
-            <p>When it reboots, the wizard guides you through the rest with your remote.</p>
+            <p>When it reboots, the first-run wizard pairs your remote automatically and guides you through language and
+              sound output:</p>
           </li>
         </ol>
+
+        <div class="shots">
+          <figure>
+            <picture>
+              <source srcset="assets/img/auto-pairing.webp" type="image/webp">
+              <img src="assets/img/auto-pairing.png" width="1920" height="1080" loading="lazy" decoding="async"
+                alt="Bigfoot OS discovering and pairing a Bluetooth TV remote automatically">
+            </picture>
+            <figcaption>Remotes pair themselves.</figcaption>
+          </figure>
+          <figure>
+            <picture>
+              <source srcset="assets/img/language.webp" type="image/webp">
+              <img src="assets/img/language.png" width="1920" height="1080" loading="lazy" decoding="async"
+                alt="Choosing a display language during Bigfoot OS first-run setup">
+            </picture>
+            <figcaption>Pick your language.</figcaption>
+          </figure>
+          <figure>
+            <picture>
+              <source srcset="assets/img/sound.webp" type="image/webp">
+              <img src="assets/img/sound.png" width="1920" height="1080" loading="lazy" decoding="async"
+                alt="Selecting HDMI eARC or S/PDIF audio output during Bigfoot OS first-run setup">
+            </picture>
+            <figcaption>Choose where the sound plays.</figcaption>
+          </figure>
+        </div>
 
         <h3 class="subhead">Update channels</h3>
         <p class="sub">Choose a channel in <strong>Settings → System &amp; Updates</strong> at any time.</p>
@@ -470,83 +413,6 @@
               </tr>
             </tbody>
           </table>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt" id="privacy" aria-labelledby="privacy-title">
-      <div class="wrap">
-        <p class="eyebrow">Privacy and security</p>
-        <h2 id="privacy-title">Nothing phones home.</h2>
-        <ul class="grid two">
-          <li class="card">
-            <h3>No telemetry</h3>
-            <p>There is no tracking, no analytics and no account requirement. This website sets no cookies and loads
-              nothing from third parties.</p>
-          </li>
-          <li class="card">
-            <h3>Opt-in by design</h3>
-            <p>Integrations are disabled until you enable them.</p>
-          </li>
-          <li class="card">
-            <h3>Read-only system</h3>
-            <p>The OS image can’t be modified by accident, system images can be verified with Sigstore signatures.</p>
-          </li>
-          <li class="card">
-            <h3>The show must go on</h3>
-            <p>System updates are atomic, don't let a buggy update ruin your evening.</p>
-          </li>
-        </ul>
-        <p class="note">The system checks the Bigfoot system repository and Flathub for updates. The Bigfoot repository
-          learns
-          nothing about you from this check.</p>
-      </div>
-    </section>
-
-    <section class="section" id="faq" aria-labelledby="faq-title">
-      <div class="wrap">
-        <p class="eyebrow">Questions and answers</p>
-        <h2 id="faq-title">Frequently asked questions.</h2>
-        <div class="faq">
-          <details open>
-            <summary>What hardware do I need to run Bigfoot OS?</summary>
-            <p>Any 64-bit (<code>x86_64</code>) mini-PC, home theater PC (HTPC), desktop, or laptop with AMD or Intel
-              graphics, 4 GB of RAM, 16 GB of storage, and an HDMI output. An <code>ARM64</code>
-              (<code>aarch64</code>) build is also available for virtual machines such as UTM on Apple Silicon.</p>
-          </details>
-          <details>
-            <summary>How is Bigfoot OS different from Google TV, Android TV, or LibreELEC?</summary>
-            <p>Unlike Google TV, Android TV, or Fire TV, Bigfoot OS shows zero ads, collects zero telemetry, and never
-              asks for an account. Unlike single-app appliances such as LibreELEC, it boots into a complete Wayland
-              10-foot television shell with a one-click Flatpak app store and atomic <code>bootc</code> system
-              updates.</p>
-          </details>
-          <details>
-            <summary>Which TV remotes and game controllers work out of the box?</summary>
-            <p>Most regular TV remotes work over HDMI-CEC on supported hardware or with a Pulse-Eight USB-CEC adapter.
-              Bluetooth remotes—including the Chromecast with Google TV Remote and Amazon Fire TV Remote—pair
-              automatically during first-run setup with built-in infrared (IR) TV volume and power programming,
-              alongside Xbox wireless controllers and smartphones via KDE Connect.</p>
-          </details>
-          <details>
-            <summary>Which media, streaming, and gaming apps can I install?</summary>
-            <p>The built-in Store installs 10-foot Flatpak apps in one click without an account, including Kodi,
-              Jellyfin, Plex HTPC, VacuumTube (for ad-free YouTube), ARTE.tv, Steam, Moonlight, RetroArch, Chiaki4deck,
-              and PPSSPP, plus additional Linux apps from Flathub.</p>
-          </details>
-          <details>
-            <summary>Does Bigfoot OS support 4K video decoding and surround sound?</summary>
-            <p>Yes. Bigfoot OS includes hardware-accelerated 4K HEVC and AV1 video decoding on AMD and Intel GPUs,
-              PipeWire HDMI audio passthrough, and a built-in adaptive surround-to-stereo downmix DSP
-              (<code>Cinema</code>, <code>Balanced</code>, and <code>Night</code> presets) that keeps dialogue clear on
-              stereo TV speakers.</p>
-          </details>
-          <details>
-            <summary>What happens if a system update goes wrong?</summary>
-            <p>Bigfoot OS is built on Fedora Atomic (<code>bootc</code>) read-only container images. Updates download
-              quietly in the background and apply on reboot while keeping the previous deployment intact, so you can
-              roll back in seconds from Settings or the boot menu.</p>
-          </details>
         </div>
       </div>
     </section>

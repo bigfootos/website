@@ -44,6 +44,8 @@ build:assets:
       - site/favicon.svg
       - site/favicon-48x48.png
       - site/apple-touch-icon.png
+      - site/icon-192.png
+      - site/icon-512.png
       - site/assets/img/*.png
       - site/assets/img/*.webp
     expire_in: 1 day

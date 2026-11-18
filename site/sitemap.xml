@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://bigfoot.sektor64.net/</loc>
-    <lastmod>2026-11-14</lastmod>
+    <lastmod>2026-11-18</lastmod>
+    <image:image>
+      <image:loc>https://bigfoot.sektor64.net/assets/img/home.png</image:loc>
+      <image:title>Bigfoot OS 10-foot television home screen</image:title>
+      <image:caption>Bigfoot OS 10-foot Wayland television home screen showing Jellyfin Media Player, Kodi, Plex HTPC, VacuumTube, and Moonlight.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://bigfoot.sektor64.net/assets/img/auto-pairing.png</image:loc>
+      <image:title>Bigfoot OS automatic Bluetooth TV remote pairing</image:title>
+      <image:caption>First-run setup automatically discovering and pairing a Bluetooth TV remote with zero button presses.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://bigfoot.sektor64.net/assets/img/language.png</image:loc>
+      <image:title>Bigfoot OS display language selection</image:title>
+      <image:caption>Choosing the system and TV app display language during first-run setup.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://bigfoot.sektor64.net/assets/img/sound.png</image:loc>
+      <image:title>Bigfoot OS HDMI and audio output selection</image:title>
+      <image:caption>Selecting HDMI eARC, Optical S/PDIF, or analog audio output during first-run setup.</image:caption>
+    </image:image>
   </url>
 </urlset>

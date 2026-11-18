@@ -134,9 +134,17 @@ td:last-child { color: var(--text-secondary); }
 .projects strong { color: var(--text); font-weight: 600; font-family: var(--mono); font-size: 1rem; }
 .projects span { color: var(--text-secondary); font-size: 0.95rem; }
 
+/* FAQ */
+.faq { margin: 48px 0 0; display: grid; gap: 12px; }
+.faq details { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 20px 24px; transition: border-color 0.15s; }
+.faq details[open] { border-color: var(--border-subtle); }
+.faq summary { cursor: pointer; color: var(--text); font-size: 1.125rem; font-weight: 500; letter-spacing: -0.01em; }
+.faq details p { margin: 12px 0 0; color: var(--text-secondary); font-size: 1rem; }
+
 /* Footer */
 .footer { border-top: 1px solid var(--border); padding: 36px 0 48px; color: var(--text-secondary); font-size: 0.95rem; }
 .footer-inner { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
 .footer p { margin: 0; }
 
 @media (max-width: 720px) {

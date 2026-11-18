@@ -2,7 +2,7 @@
 # Render derived WebP images and favicon assets from source SVGs/PNGs in site/.
 set -eu
 
-ROOT=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+ROOT=$(CDPATH='' cd -- "$(dirname -- "$0")/.." && pwd)
 SITE="$ROOT/site"
 IMG_DIR="$SITE/assets/img"
 
@@ -34,11 +34,13 @@ render_svg() {
     fi
 }
 
-# 1. Brand favicons and touch icon derived from site/assets/img/logo.svg
+# 1. Brand favicons, touch icon and webmanifest icons derived from site/assets/img/logo.svg
 if [ -f "$IMG_DIR/logo.svg" ]; then
     cp "$IMG_DIR/logo.svg" "$SITE/favicon.svg"
     render_svg "$IMG_DIR/logo.svg" "$SITE/favicon-48x48.png" 48 48
     render_svg "$IMG_DIR/logo.svg" "$SITE/apple-touch-icon.png" 180 180
+    render_svg "$IMG_DIR/logo.svg" "$SITE/icon-192.png" 192 192
+    render_svg "$IMG_DIR/logo.svg" "$SITE/icon-512.png" 512 512
 fi
 
 # 2. Rasterize any other SVG in site/assets/img/*.svg to a PNG fallback

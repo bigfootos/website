@@ -7,7 +7,10 @@
   <title>Bigfoot OS — Open-Source Linux Smart TV Operating System</title>
   <link rel="canonical" href="https://bigfoot.sektor64.net/">
   <meta name="description"
-    content="Free, telemetry-free Linux smart TV OS and Google TV alternative for mini-PCs. Run Jellyfin, Kodi and Flatpak apps with your TV remote—no ads or accounts.">
+    content="Free, telemetry-free Linux smart TV OS and Google TV alternative for mini-PCs. Run Kodi, Jellyfin, Plex and Steam with your TV remote—no ads or accounts.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="application-name" content="Bigfoot OS">
+  <meta name="apple-mobile-web-app-title" content="Bigfoot OS">
   <meta name="color-scheme" content="dark">
   <meta name="theme-color" content="#06070a">
   <meta property="og:site_name" content="Bigfoot OS">
@@ -21,43 +24,179 @@
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1920">
   <meta property="og:image:height" content="1080">
-  <meta property="og:image:alt" content="Bigfoot OS 10-foot television home screen">
+  <meta property="og:image:alt"
+    content="Bigfoot OS 10-foot television home screen showing Jellyfin Media Player, Kodi, Plex HTPC, VacuumTube, and Moonlight">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Bigfoot OS — Open-Source Linux Smart TV Operating System">
   <meta name="twitter:description"
     content="Turn a mini-PC or computer into a smart TV you control with your remote. No ads. No telemetry. No account.">
   <meta name="twitter:image" content="https://bigfoot.sektor64.net/assets/img/home.png">
-  <meta name="twitter:image:alt" content="Bigfoot OS 10-foot television home screen">
+  <meta name="twitter:image:alt"
+    content="Bigfoot OS 10-foot television home screen showing Jellyfin Media Player, Kodi, Plex HTPC, VacuumTube, and Moonlight">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="icon" href="favicon-48x48.png" type="image/png" sizes="48x48">
   <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="site.webmanifest">
   <link rel="stylesheet" href="assets/css/style.css">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Bigfoot OS",
-      "url": "https://bigfoot.sektor64.net/",
-      "description": "An open-source, telemetry-free Linux smart TV operating system that turns a mini-PC or computer into a privacy-respecting television interface controlled with your TV remote.",
-      "applicationCategory": "OperatingSystem",
-      "operatingSystem": "Linux",
-      "softwareHelp": "https://bigfoot.sektor64.net/#install",
-      "downloadUrl": "https://git.sektor64.net/bigfoot/os/-/packages",
-      "codeRepository": "https://git.sektor64.net/bigfoot",
-      "license": "https://www.apache.org/licenses/LICENSE-2.0",
-      "screenshot": "https://bigfoot.sektor64.net/assets/img/home.png",
-      "isAccessibleForFree": true,
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Bigfoot OS",
-        "url": "https://bigfoot.sektor64.net/",
-        "logo": "https://bigfoot.sektor64.net/apple-touch-icon.png"
-      }
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://bigfoot.sektor64.net/#organization",
+          "name": "Bigfoot OS",
+          "url": "https://bigfoot.sektor64.net/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://bigfoot.sektor64.net/icon-512.png",
+            "width": 512,
+            "height": 512
+          },
+          "sameAs": [
+            "https://git.sektor64.net/bigfoot",
+            "https://git.sektor64.net/bigfoot/os",
+            "https://git.sektor64.net/bigfoot/os/-/wikis/home",
+            "https://matrix.to/#/%23bigfoot:sektor64.net"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://bigfoot.sektor64.net/#website",
+          "name": "Bigfoot OS",
+          "alternateName": [
+            "Bigfoot",
+            "Bigfoot Linux Smart TV OS"
+          ],
+          "url": "https://bigfoot.sektor64.net/",
+          "inLanguage": "en",
+          "publisher": {
+            "@id": "https://bigfoot.sektor64.net/#organization"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://bigfoot.sektor64.net/#software",
+          "name": "Bigfoot OS",
+          "url": "https://bigfoot.sektor64.net/",
+          "description": "An open-source, telemetry-free Linux smart TV operating system that turns a mini-PC or computer into a privacy-respecting 10-foot television interface controlled with your TV remote.",
+          "applicationCategory": "OperatingSystem",
+          "applicationSubCategory": "Smart TV Operating System",
+          "operatingSystem": "Linux",
+          "processorRequirements": "64-bit x86_64 (AMD64) or ARM64 (aarch64)",
+          "memoryRequirements": "4 GB RAM",
+          "storageRequirements": "16 GB storage",
+          "softwareHelp": "https://git.sektor64.net/bigfoot/os/-/wikis/home",
+          "downloadUrl": "https://git.sektor64.net/bigfoot/os/-/packages",
+          "installUrl": "https://bigfoot.sektor64.net/#install",
+          "releaseNotes": "https://git.sektor64.net/bigfoot/os/-/commits/stable",
+          "codeRepository": "https://git.sektor64.net/bigfoot/os",
+          "license": "https://www.apache.org/licenses/LICENSE-2.0",
+          "isAccessibleForFree": true,
+          "featureList": [
+            "10-foot Wayland television launcher with D-pad remote navigation",
+            "HDMI-CEC and automatic Bluetooth remote pairing with IR volume and power programming",
+            "One-click Flatpak TV app store with Kodi, Jellyfin, Plex HTPC, VacuumTube, ARTE.tv, Steam, Moonlight, and RetroArch",
+            "Hardware-accelerated 4K HEVC and AV1 video decoding on AMD and Intel graphics",
+            "Adaptive surround-to-stereo downmix DSP and HDMI audio passthrough",
+            "Atomic Fedora bootc system updates with instant rollback",
+            "Zero ads, zero telemetry, and no user account required"
+          ],
+          "screenshot": [
+            {
+              "@type": "ImageObject",
+              "url": "https://bigfoot.sektor64.net/assets/img/home.png",
+              "width": 1920,
+              "height": 1080,
+              "caption": "Bigfoot OS 10-foot Wayland television home screen"
+            },
+            {
+              "@type": "ImageObject",
+              "url": "https://bigfoot.sektor64.net/assets/img/auto-pairing.png",
+              "width": 1920,
+              "height": 1080,
+              "caption": "Automatic Bluetooth TV remote discovery and pairing during first-run setup"
+            },
+            {
+              "@type": "ImageObject",
+              "url": "https://bigfoot.sektor64.net/assets/img/language.png",
+              "width": 1920,
+              "height": 1080,
+              "caption": "Display language selection during first-run setup"
+            },
+            {
+              "@type": "ImageObject",
+              "url": "https://bigfoot.sektor64.net/assets/img/sound.png",
+              "width": 1920,
+              "height": 1080,
+              "caption": "HDMI eARC, Optical S/PDIF, and analog audio output selection"
+            }
+          ],
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          },
+          "publisher": {
+            "@id": "https://bigfoot.sektor64.net/#organization"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://bigfoot.sektor64.net/#faq-schema",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What hardware do I need to run Bigfoot OS?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Any 64-bit (x86_64) mini-PC, home theater PC (HTPC), desktop, or laptop with AMD or Intel graphics, 4 GB of RAM, 16 GB of storage, and an HDMI output. An ARM64 (aarch64) build is also available for virtual machines such as UTM on Apple Silicon."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How is Bigfoot OS different from Google TV, Android TV, or LibreELEC?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Unlike Google TV, Android TV, or Fire TV, Bigfoot OS shows zero ads, collects zero telemetry, and never asks for an account. Unlike single-app appliances such as LibreELEC, it boots into a complete Wayland 10-foot television shell with a one-click Flatpak app store and atomic bootc system updates."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Which TV remotes and game controllers work out of the box?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Most regular TV remotes work over HDMI-CEC on supported hardware or with a Pulse-Eight USB-CEC adapter. Bluetooth remotes—including the Chromecast with Google TV Remote and Amazon Fire TV Remote—pair automatically during first-run setup with built-in infrared (IR) TV volume and power programming, alongside Xbox wireless controllers and smartphones via KDE Connect."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Which media, streaming, and gaming apps can I install?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The built-in Store installs 10-foot Flatpak apps in one click without an account, including Kodi, Jellyfin, Plex HTPC, VacuumTube (for ad-free YouTube), ARTE.tv, Steam, Moonlight, RetroArch, Chiaki4deck, and PPSSPP, plus additional Linux apps from Flathub."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does Bigfoot OS support 4K video decoding and surround sound?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Bigfoot OS includes hardware-accelerated 4K HEVC and AV1 video decoding on AMD and Intel GPUs, PipeWire HDMI audio passthrough, and a built-in adaptive surround-to-stereo downmix DSP (Cinema, Balanced, and Night presets) that keeps dialogue clear on stereo TV speakers."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What happens if a system update goes wrong?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Bigfoot OS is built on Fedora Atomic (bootc) read-only container images. Updates download quietly in the background and apply on reboot while keeping the previous deployment intact, so you can roll back in seconds from Settings or the boot menu."
+              }
+            }
+          ]
+        }
+      ]
     }
   </script>
 </head>
@@ -76,16 +215,18 @@
         <a href="#concept">Concept</a>
         <a href="#install">Install</a>
         <a href="#privacy">Privacy</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://git.sektor64.net/bigfoot/os/-/wikis/home" rel="noopener">Docs</a>
         <a target="_blank" rel="noopener" href="https://matrix.to/#/%23bigfoot:sektor64.net">Chat on Matrix</a>
       </nav>
     </div>
   </header>
 
   <main id="main">
-    <section class="hero" id="top">
+    <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="wrap hero-inner">
         <p class="eyebrow">Open-source Linux television OS</p>
-        <h1>A smart TV that<br>works for you.</h1>
+        <h1 id="hero-title">A smart TV that<br>works for you.</h1>
         <p class="lede">Bigfoot OS turns a mini-PC or computer into a TV you control with your remote—a private
           alternative to Google TV.<br>No ads. No telemetry. No account.</p>
         <div class="cta-row">
@@ -96,16 +237,16 @@
           <picture>
             <source srcset="assets/img/home.webp" type="image/webp">
             <img src="assets/img/home.png" width="1920" height="1080" fetchpriority="high" decoding="async"
-              alt="Bigfoot OS 10-foot television home screen">
+              alt="Bigfoot OS 10-foot television home screen showing Jellyfin Media Player, Kodi, Plex HTPC, VacuumTube, and Moonlight">
           </picture>
         </figure>
       </div>
     </section>
 
-    <section class="section" id="features">
+    <section class="section" id="features" aria-labelledby="features-title">
       <div class="wrap">
         <p class="eyebrow">What you get</p>
-        <h2>Made for the couch.</h2>
+        <h2 id="features-title">Made for the couch.</h2>
         <p class="sub">Everything is designed to be read from three meters away and driven with five buttons.</p>
         <ul class="grid">
           <li class="card">
@@ -123,8 +264,8 @@
           </li>
           <li class="card">
             <h3>App Store</h3>
-            <p>Install Flatpak apps like Kodi, Jellyfin, MPV, VLC and VacuumTube in 1 click from the home screen. No
-              accounts needed.</p>
+            <p>Install Flatpak apps like Kodi, Jellyfin, Plex HTPC, VacuumTube, ARTE.tv, Steam, Moonlight and RetroArch
+              in 1 click from the home screen. No accounts needed.</p>
           </li>
           <li class="card">
             <h3>Easy updates</h3>
@@ -151,7 +292,7 @@
             <picture>
               <source srcset="assets/img/auto-pairing.webp" type="image/webp">
               <img src="assets/img/auto-pairing.png" width="1920" height="1080" loading="lazy" decoding="async"
-                alt="Bigfoot OS discovering and pairing a Bluetooth remote automatically">
+                alt="Bigfoot OS discovering and pairing a Bluetooth TV remote automatically">
             </picture>
             <figcaption>Remotes pair themselves.</figcaption>
           </figure>
@@ -159,7 +300,7 @@
             <picture>
               <source srcset="assets/img/language.webp" type="image/webp">
               <img src="assets/img/language.png" width="1920" height="1080" loading="lazy" decoding="async"
-                alt="Choosing a language during first-run setup">
+                alt="Choosing a display language during Bigfoot OS first-run setup">
             </picture>
             <figcaption>Pick your language.</figcaption>
           </figure>
@@ -167,7 +308,7 @@
             <picture>
               <source srcset="assets/img/sound.webp" type="image/webp">
               <img src="assets/img/sound.png" width="1920" height="1080" loading="lazy" decoding="async"
-                alt="Choosing a sound output during first-run setup">
+                alt="Selecting HDMI eARC or S/PDIF audio output during Bigfoot OS first-run setup">
             </picture>
             <figcaption>Choose where the sound plays.</figcaption>
           </figure>
@@ -175,10 +316,10 @@
       </div>
     </section>
 
-    <section class="section alt" id="concept">
+    <section class="section alt" id="concept" aria-labelledby="concept-title">
       <div class="wrap">
         <p class="eyebrow">3 golden rules, aligned with the goal of</p>
-        <h2>stable and zero distraction television</h2>
+        <h2 id="concept-title">stable and zero distraction television</h2>
         <ol class="layers">
           <li>
             <span class="layer-n">1</span>
@@ -211,12 +352,12 @@
       </div>
     </section>
 
-    <section class="section" id="install">
+    <section class="section" id="install" aria-labelledby="install-title">
       <div class="wrap">
         <p class="eyebrow">Install</p>
-        <h2>Ready in a few minutes.</h2>
-        <p class="sub">You need a mini-PC (or any other PC), a USB drive, mouse & keyboard and an internet connection
-          during installation.
+        <h2 id="install-title">Ready in a few minutes.</h2>
+        <p class="sub">You need a mini-PC (or any other PC), a USB drive, mouse &amp; keyboard and an internet
+          connection during installation.
         </p>
 
         <ol class="steps">
@@ -256,8 +397,8 @@
           <table>
             <thead>
               <tr>
-                <th>Channel</th>
-                <th>Best for</th>
+                <th scope="col">Channel</th>
+                <th scope="col">Best for</th>
               </tr>
             </thead>
             <tbody>
@@ -282,8 +423,8 @@
           <table>
             <thead>
               <tr>
-                <th>Platform</th>
-                <th>Status</th>
+                <th scope="col">Platform</th>
+                <th scope="col">Status</th>
               </tr>
             </thead>
             <tbody>
@@ -302,8 +443,8 @@
           <table>
             <thead>
               <tr>
-                <th>Remote or controller</th>
-                <th>Status</th>
+                <th scope="col">Remote or controller</th>
+                <th scope="col">Status</th>
               </tr>
             </thead>
             <tbody>
@@ -333,10 +474,10 @@
       </div>
     </section>
 
-    <section class="section alt" id="privacy">
+    <section class="section alt" id="privacy" aria-labelledby="privacy-title">
       <div class="wrap">
         <p class="eyebrow">Privacy and security</p>
-        <h2>Nothing phones home.</h2>
+        <h2 id="privacy-title">Nothing phones home.</h2>
         <ul class="grid two">
           <li class="card">
             <h3>No telemetry</h3>
@@ -362,10 +503,58 @@
       </div>
     </section>
 
-    <section class="section" id="projects">
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="wrap">
+        <p class="eyebrow">Questions and answers</p>
+        <h2 id="faq-title">Frequently asked questions.</h2>
+        <div class="faq">
+          <details open>
+            <summary>What hardware do I need to run Bigfoot OS?</summary>
+            <p>Any 64-bit (<code>x86_64</code>) mini-PC, home theater PC (HTPC), desktop, or laptop with AMD or Intel
+              graphics, 4 GB of RAM, 16 GB of storage, and an HDMI output. An <code>ARM64</code>
+              (<code>aarch64</code>) build is also available for virtual machines such as UTM on Apple Silicon.</p>
+          </details>
+          <details>
+            <summary>How is Bigfoot OS different from Google TV, Android TV, or LibreELEC?</summary>
+            <p>Unlike Google TV, Android TV, or Fire TV, Bigfoot OS shows zero ads, collects zero telemetry, and never
+              asks for an account. Unlike single-app appliances such as LibreELEC, it boots into a complete Wayland
+              10-foot television shell with a one-click Flatpak app store and atomic <code>bootc</code> system
+              updates.</p>
+          </details>
+          <details>
+            <summary>Which TV remotes and game controllers work out of the box?</summary>
+            <p>Most regular TV remotes work over HDMI-CEC on supported hardware or with a Pulse-Eight USB-CEC adapter.
+              Bluetooth remotes—including the Chromecast with Google TV Remote and Amazon Fire TV Remote—pair
+              automatically during first-run setup with built-in infrared (IR) TV volume and power programming,
+              alongside Xbox wireless controllers and smartphones via KDE Connect.</p>
+          </details>
+          <details>
+            <summary>Which media, streaming, and gaming apps can I install?</summary>
+            <p>The built-in Store installs 10-foot Flatpak apps in one click without an account, including Kodi,
+              Jellyfin, Plex HTPC, VacuumTube (for ad-free YouTube), ARTE.tv, Steam, Moonlight, RetroArch, Chiaki4deck,
+              and PPSSPP, plus additional Linux apps from Flathub.</p>
+          </details>
+          <details>
+            <summary>Does Bigfoot OS support 4K video decoding and surround sound?</summary>
+            <p>Yes. Bigfoot OS includes hardware-accelerated 4K HEVC and AV1 video decoding on AMD and Intel GPUs,
+              PipeWire HDMI audio passthrough, and a built-in adaptive surround-to-stereo downmix DSP
+              (<code>Cinema</code>, <code>Balanced</code>, and <code>Night</code> presets) that keeps dialogue clear on
+              stereo TV speakers.</p>
+          </details>
+          <details>
+            <summary>What happens if a system update goes wrong?</summary>
+            <p>Bigfoot OS is built on Fedora Atomic (<code>bootc</code>) read-only container images. Updates download
+              quietly in the background and apply on reboot while keeping the previous deployment intact, so you can
+              roll back in seconds from Settings or the boot menu.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="projects" aria-labelledby="projects-title">
       <div class="wrap">
         <p class="eyebrow">Open source</p>
-        <h2>Built in the open.</h2>
+        <h2 id="projects-title">Built in the open.</h2>
         <p class="sub">Bigfoot OS is made of several public projects:</p>
         <ul class="projects">
           <li><a href="https://git.sektor64.net/bigfoot/os" rel="noopener"><strong>os</strong><span>The bootable
@@ -390,6 +579,8 @@
           <li><a href="https://git.sektor64.net/bigfoot/flatpaks" rel="noopener"><strong>flatpaks</strong><span>The
                 Bigfoot
                 Flatpak repository</span></a></li>
+          <li><a href="https://git.sektor64.net/bigfoot/catalog" rel="noopener"><strong>catalog</strong><span>Curated
+                10-foot app catalog</span></a></li>
           <li><a href="https://git.sektor64.net/bigfoot/design-guidelines"
               rel="noopener"><strong>design-guidelines</strong><span>The 10-foot UI design system</span></a></li>
         </ul>
@@ -401,7 +592,10 @@
     <div class="wrap footer-inner">
       <p>Bigfoot OS is open source. ©sektor64.net
       </p>
-      <p><a href="https://git.sektor64.net/bigfoot/website" rel="noopener">Edit this page</a></p>
+      <p class="footer-links">
+        <a href="https://git.sektor64.net/bigfoot/os/-/wikis/home" rel="noopener">Documentation</a>
+        <a href="https://git.sektor64.net/bigfoot/website" rel="noopener">Edit this page</a>
+      </p>
     </div>
   </footer>
 

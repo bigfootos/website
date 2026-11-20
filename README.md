@@ -2,6 +2,8 @@
 
 The official website of **Bigfoot OS**. A dependency-free static site (plain HTML, CSS and progressive-enhancement JavaScript) deployed with **GitLab Pages** (`https://bigfoot.pages.sector64.net/website/`).
 
+![Bigfoot OS — Open-Source Linux Smart TV Operating System](site/assets/img/social-preview.png)
+
 It follows the [Bigfoot design system](https://git.sektor64.net/bigfoot/design-guidelines) (OLED obsidian `#06070a` palette, soft-white pill actions, hairline surfaces), uses system fonts and makes no third-party requests.
 
 ## Quick Start (Local Preview)

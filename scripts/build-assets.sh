@@ -9,24 +9,15 @@ IMG_DIR="$SITE/assets/img"
 render_svg() {
     src=$1
     dst=$2
-    w=${3:-}
-    h=${4:-}
+    w=$3
+    h=$4
     if command -v rsvg-convert >/dev/null 2>&1; then
-        if [ -n "$w" ] && [ -n "$h" ]; then
-            rsvg-convert -w "$w" -h "$h" "$src" -o "$dst"
-        else
-            rsvg-convert "$src" -o "$dst"
-        fi
+        rsvg-convert -w "$w" -h "$h" "$src" -o "$dst"
     elif command -v qlmanage >/dev/null 2>&1 && command -v sips >/dev/null 2>&1; then
         tmpdir=$(mktemp -d)
-        size=${w:-1920}
-        qlmanage -t -s "$size" -o "$tmpdir" "$src" >/dev/null 2>&1
+        qlmanage -t -s "$w" -o "$tmpdir" "$src" >/dev/null 2>&1
         tmp_png="$tmpdir/$(basename "$src").png"
-        if [ -n "$w" ] && [ -n "$h" ]; then
-            sips -z "$h" "$w" "$tmp_png" --out "$dst" >/dev/null
-        else
-            cp "$tmp_png" "$dst"
-        fi
+        sips -z "$h" "$w" "$tmp_png" --out "$dst" >/dev/null
         rm -rf "$tmpdir"
     else
         echo "ERROR: need rsvg-convert (or macOS qlmanage+sips) to rasterize $src" >&2
@@ -43,17 +34,11 @@ if [ -f "$IMG_DIR/logo.svg" ]; then
     render_svg "$IMG_DIR/logo.svg" "$SITE/icon-512.png" 512 512
 fi
 
-# 2. Rasterize any other SVG in site/assets/img/*.svg to a PNG fallback
-for svg in "$IMG_DIR"/*.svg; do
-    [ -f "$svg" ] || continue
-    stem=$(basename "$svg" .svg)
-    [ "$stem" = "logo" ] && continue
-    render_svg "$svg" "$IMG_DIR/$stem.png"
-done
-
-# 3. Encode every PNG in site/assets/img/*.png to WebP
+# 2. Encode every PNG in site/assets/img/*.png (except social-preview.png) to WebP
+rm -f "$IMG_DIR/social-preview.webp"
 for png in "$IMG_DIR"/*.png; do
     [ -f "$png" ] || continue
     stem=$(basename "$png" .png)
+    [ "$stem" = "social-preview" ] && continue
     cwebp -quiet -q 86 -m 6 -sharp_yuv "$png" -o "$IMG_DIR/$stem.webp"
 done

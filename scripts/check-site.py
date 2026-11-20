@@ -32,7 +32,7 @@ LOAD_ATTRS = {
     ("iframe", "src"),
 }
 # <link rel="..."> tokens that declare page metadata and are never fetched by browsers.
-PASSIVE_LINK_RELS = {"canonical", "sitemap"}
+PASSIVE_LINK_RELS = {"canonical"}
 META_URL_KEYS = {"og:url", "og:image", "twitter:image"}
 REQUIRED_META_KEYS = {"description", "og:title", "og:description", "og:url", "og:image"}
 
@@ -131,7 +131,7 @@ def check_canonical_origin_url(rel_page, label: str, value: str, parsed: dict, e
         return
     if url.fragment and target.suffix == ".html":
         ids = parsed[target].ids if target in parsed else set()
-        if url.fragment not in ids and not url.fragment.endswith("-schema") and url.fragment not in ("organization", "website", "software"):
+        if url.fragment not in ids and url.fragment not in ("organization", "website", "software"):
             errors.append(f"{rel_page}: {label} points to missing anchor #{url.fragment} in {target.name}")
 
 

@@ -7,7 +7,7 @@
     <image:image>
       <image:loc>https://bigfoot.sektor64.net/assets/img/home.png</image:loc>
       <image:title>Bigfoot OS 10-foot television home screen</image:title>
-      <image:caption>Bigfoot OS 10-foot Wayland television home screen showing Jellyfin Media Player, Kodi, Plex HTPC, VacuumTube, and Moonlight.</image:caption>
+      <image:caption>Bigfoot OS 10-foot Wayland television home screen showing Jellyfin, Kodi, Arte, VacuumTube, and Plex HTPC.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://bigfoot.sektor64.net/assets/img/arte-tv.png</image:loc>
@@ -17,7 +17,7 @@
     <image:image>
       <image:loc>https://bigfoot.sektor64.net/assets/img/store.png</image:loc>
       <image:title>Bigfoot OS 10-foot Flatpak television app store</image:title>
-      <image:caption>Curated 10-foot television app store for installing Kodi, Jellyfin, ARTE.tv, VacuumTube, Moonlight, and Steam in one click.</image:caption>
+      <image:caption>Curated 10-foot television app store for installing Kodi, Jellyfin, ARTE.tv, VacuumTube, and Plex HTPC in one click.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://bigfoot.sektor64.net/assets/img/settings.png</image:loc>

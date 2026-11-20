@@ -119,6 +119,20 @@
             },
             {
               "@type": "ImageObject",
+              "url": "https://bigfoot.sektor64.net/assets/img/store.png",
+              "width": 1920,
+              "height": 1080,
+              "caption": "Bigfoot OS 10-foot Flatpak television app store"
+            },
+            {
+              "@type": "ImageObject",
+              "url": "https://bigfoot.sektor64.net/assets/img/settings.png",
+              "width": 1920,
+              "height": 1080,
+              "caption": "Bigfoot OS television sound settings and adaptive downmix presets"
+            },
+            {
+              "@type": "ImageObject",
               "url": "https://bigfoot.sektor64.net/assets/img/auto-pairing.png",
               "width": 1920,
               "height": 1080,
@@ -194,18 +208,59 @@
                   <img src="assets/img/home.png" width="1920" height="1080" fetchpriority="high" decoding="async"
                     alt="Bigfoot OS 10-foot television home screen showing Jellyfin Media Player, Kodi, Arte, VacuumTube, Plex HTPC, Moonlight, and Steam">
                 </picture>
-                <figcaption class="sr-only">10-foot home screen — Jellyfin, Kodi, Arte, VacuumTube, Plex HTPC, Moonlight, and Steam</figcaption>
+                <figcaption class="sr-only">Boots straight into a 10-foot Wayland TV home screen—no desktop, no login, no ads.</figcaption>
               </figure>
               <figure class="slide" id="slide-arte" data-slide>
                 <picture>
                   <source srcset="assets/img/arte-tv.webp" type="image/webp">
-                  <img src="assets/img/arte-tv.png" width="1920" height="1080" loading="lazy" decoding="async"
+                  <img src="assets/img/arte-tv.png" width="1920" height="1080" decoding="async"
                     alt="ARTE.tv 10-foot television streaming app on Bigfoot OS showing live broadcast and video catalogue">
                 </picture>
-                <figcaption class="sr-only">ARTE.tv — Native 10-foot European cultural television streaming app</figcaption>
+                <figcaption class="sr-only">Stream live television, documentaries, and cinema in native 10-foot TV apps.</figcaption>
+              </figure>
+              <figure class="slide" id="slide-store" data-slide>
+                <picture>
+                  <source srcset="assets/img/store.webp" type="image/webp">
+                  <img src="assets/img/store.png" width="1920" height="1080" decoding="async"
+                    alt="Bigfoot OS 10-foot app store showing Arte, Kodi, Jellyfin, VacuumTube, Moonlight, and Steam">
+                </picture>
+                <figcaption class="sr-only">Install Kodi, Jellyfin, ARTE.tv, VacuumTube, Moonlight, and Steam in one click.</figcaption>
+              </figure>
+              <figure class="slide" id="slide-settings" data-slide>
+                <picture>
+                  <source srcset="assets/img/settings.webp" type="image/webp">
+                  <img src="assets/img/settings.png" width="1920" height="1080" decoding="async"
+                    alt="Bigfoot OS sound settings showing HDMI and Bluetooth audio outputs and Cinema, Balanced, and Night sound processing presets">
+                </picture>
+                <figcaption class="sr-only">Switch audio outputs, tune surround-to-stereo downmix presets, and pair remotes.</figcaption>
+              </figure>
+              <figure class="slide" id="slide-pairing" data-slide>
+                <picture>
+                  <source srcset="assets/img/auto-pairing.webp" type="image/webp">
+                  <img src="assets/img/auto-pairing.png" width="1920" height="1080" decoding="async"
+                    alt="Bigfoot OS discovering and pairing a Bluetooth TV remote automatically">
+                </picture>
+                <figcaption class="sr-only">Remotes pair themselves—first-run setup connects Bluetooth TV remotes automatically.</figcaption>
+              </figure>
+              <figure class="slide" id="slide-language" data-slide>
+                <picture>
+                  <source srcset="assets/img/language.webp" type="image/webp">
+                  <img src="assets/img/language.png" width="1920" height="1080" decoding="async"
+                    alt="Choosing a display language during Bigfoot OS first-run setup">
+                </picture>
+                <figcaption class="sr-only">Pick your display language across Bigfoot OS and installed television apps.</figcaption>
+              </figure>
+              <figure class="slide" id="slide-sound" data-slide>
+                <picture>
+                  <source srcset="assets/img/sound.webp" type="image/webp">
+                  <img src="assets/img/sound.png" width="1920" height="1080" decoding="async"
+                    alt="Selecting HDMI eARC or S/PDIF audio output during Bigfoot OS first-run setup">
+                </picture>
+                <figcaption class="sr-only">Choose where the sound plays—HDMI eARC, Optical S/PDIF, or analog output at 100%.</figcaption>
               </figure>
             </div>
           </div>
+          <p class="slider-caption" data-slider-caption>Boots straight into a 10-foot Wayland TV home screen—no desktop, no login, no ads.</p>
           <div class="slider-bar" role="group" aria-label="Slide controls">
             <button type="button" class="slider-arrow" data-slider-prev aria-label="Previous screenshot" hidden>
               <span aria-hidden="true">‹</span>
@@ -213,6 +268,11 @@
             <div class="slider-dots" role="group" aria-label="Choose screenshot">
               <a class="slider-dot is-active" href="#slide-home" data-slider-dot="0" aria-current="true">Home screen</a>
               <a class="slider-dot" href="#slide-arte" data-slider-dot="1">ARTE.tv</a>
+              <a class="slider-dot" href="#slide-store" data-slider-dot="2">App Store</a>
+              <a class="slider-dot" href="#slide-settings" data-slider-dot="3">Settings</a>
+              <a class="slider-dot" href="#slide-pairing" data-slider-dot="4">Remote pairing</a>
+              <a class="slider-dot" href="#slide-language" data-slider-dot="5">Language</a>
+              <a class="slider-dot" href="#slide-sound" data-slider-dot="6">Sound</a>
             </div>
             <button type="button" class="slider-arrow" data-slider-next aria-label="Next screenshot" hidden>
               <span aria-hidden="true">›</span>
@@ -337,36 +397,9 @@
           <li>
             <h3>Follow the setup wizard</h3>
             <p>When it reboots, the first-run wizard pairs your remote automatically and guides you through language and
-              sound output:</p>
+              sound output.</p>
           </li>
         </ol>
-
-        <div class="shots">
-          <figure>
-            <picture>
-              <source srcset="assets/img/auto-pairing.webp" type="image/webp">
-              <img src="assets/img/auto-pairing.png" width="1920" height="1080" loading="lazy" decoding="async"
-                alt="Bigfoot OS discovering and pairing a Bluetooth TV remote automatically">
-            </picture>
-            <figcaption>Remotes pair themselves.</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source srcset="assets/img/language.webp" type="image/webp">
-              <img src="assets/img/language.png" width="1920" height="1080" loading="lazy" decoding="async"
-                alt="Choosing a display language during Bigfoot OS first-run setup">
-            </picture>
-            <figcaption>Pick your language.</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source srcset="assets/img/sound.webp" type="image/webp">
-              <img src="assets/img/sound.png" width="1920" height="1080" loading="lazy" decoding="async"
-                alt="Selecting HDMI eARC or S/PDIF audio output during Bigfoot OS first-run setup">
-            </picture>
-            <figcaption>Choose where the sound plays.</figcaption>
-          </figure>
-        </div>
 
         <h3 class="subhead">Update channels</h3>
         <p class="sub">Choose a channel in <strong>Settings → System &amp; Updates</strong> at any time.</p>

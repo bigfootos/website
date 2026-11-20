@@ -15,6 +15,16 @@
       <image:caption>ARTE.tv 10-foot television streaming application on Bigfoot OS showing live broadcast and video catalogue.</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://bigfoot.sektor64.net/assets/img/store.png</image:loc>
+      <image:title>Bigfoot OS 10-foot Flatpak television app store</image:title>
+      <image:caption>Curated 10-foot television app store for installing Kodi, Jellyfin, ARTE.tv, VacuumTube, Moonlight, and Steam in one click.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://bigfoot.sektor64.net/assets/img/settings.png</image:loc>
+      <image:title>Bigfoot OS television sound settings</image:title>
+      <image:caption>Couch television sound settings showing HDMI and Bluetooth outputs alongside Cinema, Balanced, and Night sound processing presets.</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://bigfoot.sektor64.net/assets/img/auto-pairing.png</image:loc>
       <image:title>Bigfoot OS automatic Bluetooth TV remote pairing</image:title>
       <image:caption>First-run setup automatically discovering and pairing a Bluetooth TV remote with zero button presses.</image:caption>

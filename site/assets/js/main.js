@@ -6,11 +6,13 @@
     var track = slider.querySelector("[data-slider-track]");
     var slides = slider.querySelectorAll("[data-slide]");
     var dots = slider.querySelectorAll("[data-slider-dot]");
+    var caption = slider.querySelector("[data-slider-caption]");
     var prevBtn = slider.querySelector("[data-slider-prev]");
     var nextBtn = slider.querySelector("[data-slider-next]");
     if (!track || slides.length < 2) return;
 
     var current = 0;
+    var reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     function setActive(index) {
       current = (index + slides.length) % slides.length;
@@ -23,9 +25,13 @@
           dot.removeAttribute("aria-current");
         }
       });
+      if (caption && slides[current]) {
+        var figcap = slides[current].querySelector("figcaption");
+        if (figcap) {
+          caption.textContent = figcap.textContent;
+        }
+      }
     }
-
-    var reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     function goTo(index, instant) {
       var targetIndex = (index + slides.length) % slides.length;

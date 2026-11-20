@@ -3,11 +3,16 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://bigfoot.sektor64.net/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <image:image>
       <image:loc>https://bigfoot.sektor64.net/assets/img/home.png</image:loc>
       <image:title>Bigfoot OS 10-foot television home screen</image:title>
       <image:caption>Bigfoot OS 10-foot Wayland television home screen showing Jellyfin Media Player, Kodi, Plex HTPC, VacuumTube, and Moonlight.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://bigfoot.sektor64.net/assets/img/arte-tv.png</image:loc>
+      <image:title>ARTE.tv 10-foot television app on Bigfoot OS</image:title>
+      <image:caption>ARTE.tv 10-foot television streaming application on Bigfoot OS showing live broadcast and video catalogue.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://bigfoot.sektor64.net/assets/img/auto-pairing.png</image:loc>

@@ -112,6 +112,13 @@
             },
             {
               "@type": "ImageObject",
+              "url": "https://bigfoot.sektor64.net/assets/img/arte-tv.png",
+              "width": 1920,
+              "height": 1080,
+              "caption": "ARTE.tv 10-foot television streaming application running on Bigfoot OS"
+            },
+            {
+              "@type": "ImageObject",
               "url": "https://bigfoot.sektor64.net/assets/img/auto-pairing.png",
               "width": 1920,
               "height": 1080,
@@ -178,13 +185,40 @@
           <a class="btn primary" href="#install">Install Bigfoot OS</a>
           <a class="btn" href="https://git.sektor64.net/bigfoot" rel="noopener">View source</a>
         </div>
-        <figure class="hero-shot">
-          <picture>
-            <source srcset="assets/img/home.webp" type="image/webp">
-            <img src="assets/img/home.png" width="1920" height="1080" fetchpriority="high" decoding="async"
-              alt="Bigfoot OS 10-foot television home screen showing Jellyfin Media Player, Kodi, Plex HTPC, VacuumTube, and Moonlight">
-          </picture>
-        </figure>
+        <div class="hero-slider" data-slider role="region" aria-label="Bigfoot OS screenshots">
+          <div class="hero-shot">
+            <div class="slider-track" data-slider-track tabindex="0" role="group" aria-label="Screenshot slides">
+              <figure class="slide" id="slide-home" data-slide>
+                <picture>
+                  <source srcset="assets/img/home.webp" type="image/webp">
+                  <img src="assets/img/home.png" width="1920" height="1080" fetchpriority="high" decoding="async"
+                    alt="Bigfoot OS 10-foot television home screen showing Jellyfin Media Player, Kodi, Arte, VacuumTube, Plex HTPC, Moonlight, and Steam">
+                </picture>
+                <figcaption class="sr-only">10-foot home screen — Jellyfin, Kodi, Arte, VacuumTube, Plex HTPC, Moonlight, and Steam</figcaption>
+              </figure>
+              <figure class="slide" id="slide-arte" data-slide>
+                <picture>
+                  <source srcset="assets/img/arte-tv.webp" type="image/webp">
+                  <img src="assets/img/arte-tv.png" width="1920" height="1080" loading="lazy" decoding="async"
+                    alt="ARTE.tv 10-foot television streaming app on Bigfoot OS showing live broadcast and video catalogue">
+                </picture>
+                <figcaption class="sr-only">ARTE.tv — Native 10-foot European cultural television streaming app</figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="slider-bar" role="group" aria-label="Slide controls">
+            <button type="button" class="slider-arrow" data-slider-prev aria-label="Previous screenshot" hidden>
+              <span aria-hidden="true">‹</span>
+            </button>
+            <div class="slider-dots" role="group" aria-label="Choose screenshot">
+              <a class="slider-dot is-active" href="#slide-home" data-slider-dot="0" aria-current="true">Home screen</a>
+              <a class="slider-dot" href="#slide-arte" data-slider-dot="1">ARTE.tv</a>
+            </div>
+            <button type="button" class="slider-arrow" data-slider-next aria-label="Next screenshot" hidden>
+              <span aria-hidden="true">›</span>
+            </button>
+          </div>
+        </div>
       </div>
     </section>
 

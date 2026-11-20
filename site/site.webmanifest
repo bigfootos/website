@@ -1,7 +1,7 @@
 {
   "name": "Bigfoot OS — Open-Source Linux Smart TV Operating System",
   "short_name": "Bigfoot OS",
-  "description": "Free, telemetry-free Linux smart TV OS and Google TV alternative for mini-PCs. Run Kodi, Jellyfin, Plex and Steam with your TV remote—no ads or accounts.",
+  "description": "Free, telemetry-free Linux smart TV OS and Google TV alternative for mini-PCs. Run Kodi, Jellyfin, ARTE.tv, VacuumTube and Plex with your TV remote—no ads or accounts.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

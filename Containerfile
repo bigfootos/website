@@ -6,7 +6,7 @@ COPY ./scripts/build-assets.sh ./scripts/build-assets.sh
 COPY ./site ./site
 RUN sh ./scripts/build-assets.sh
 
-FROM nginx
+FROM docker.io/library/nginx:stable-alpine
 
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 COPY --from=assets /src/site /usr/share/nginx/html
